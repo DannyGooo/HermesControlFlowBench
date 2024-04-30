@@ -1,0 +1,94 @@
+public class HermesByteCode
+{
+
+    public static JavaScript.Function.HermesByteCode.global.JavaScript.FunctionOutput global(JavaScript.Object)
+    {
+        JavaScript.FunctionOutput r3, r4, r6;
+        JavaScript.Exception Catch;
+        JavaScript.Parameter_0 arg0;
+        JavaScript.Environment_this r0;
+        JavaScript.Object r10, r9;
+        JavaScript.Environment.index_0 r5;
+        JavaScript.Boolean r7;
+        JavaScript.Undefined r1;
+        Hbc.GlobalObject r2;
+
+        arg0 := @parameter0: JavaScript.Parameter_0;
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this CreateEnvironment()>();
+
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.Undefined LoadConstUndefined()>();
+
+        r2 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject GetGlobalObject()>();
+
+        r3 = r1;
+
+     label1:
+        r4 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.myroutine hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 1, "myroutine");
+
+        r10 = r1;
+
+        r5 = staticinvoke <Hbc.GlobalObject: Hbc.GlobalObject.myroutine.JavaScript.FunctionOutput myroutine(JavaScript.Object)>(r10);
+
+        r3 = r5;
+
+     label2:
+        goto label6;
+
+     label3:
+        Catch := @caughtexception;
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 0, r4);
+
+        r5 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_0 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 0);
+
+        r6 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.TypeError hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 2, "TypeError");
+
+        r7 = staticinvoke <Hbc.Opcode: JavaScript.Boolean InstanceOf(JavaScript.Object,JavaScript.Object)>(r5, r6);
+
+        if r7 == 1 goto label6;
+
+        r4 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_0 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 0);
+
+        r5 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.RangeError hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 3, "RangeError");
+
+        r6 = staticinvoke <Hbc.Opcode: JavaScript.Boolean InstanceOf(JavaScript.Object,JavaScript.Object)>(r4, r5);
+
+        if r6 == 1 goto label5;
+
+        r4 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_0 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 0);
+
+        r5 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.EvalError hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 4, "EvalError");
+
+        r6 = staticinvoke <Hbc.Opcode: JavaScript.Boolean InstanceOf(JavaScript.Object,JavaScript.Object)>(r4, r5);
+
+        if r6 == 1 goto label4;
+
+        r4 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.logMyErrors hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 5, "logMyErrors");
+
+        r5 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_0 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 0);
+
+        r10 = r1;
+
+        r9 = r5;
+
+        r6 = staticinvoke <Hbc.GlobalObject: Hbc.GlobalObject.logMyErrors.JavaScript.FunctionOutput logMyErrors(JavaScript.Object,JavaScript.Object)>(r10, r9);
+
+        r3 = r6;
+
+        goto label4;
+
+     label4:
+        goto label5;
+
+     label5:
+        goto label6;
+
+     label6:
+        r4 = r3;
+
+        return r4;
+
+        catch JavaScript.Exception from label1 to label2 with label3;
+    }
+}

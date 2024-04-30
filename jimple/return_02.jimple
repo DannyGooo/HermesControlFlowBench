@@ -1,0 +1,112 @@
+public class HermesByteCode
+{
+
+    public static JavaScript.Function.HermesByteCode.global.JavaScript.FunctionOutput global(JavaScript.Object)
+    {
+        Hbc.GlobalObject.magic r6;
+        JavaScript.FunctionOutput r5, r7, r9, r10;
+        JavaScript.Environment_this.index_0 r8;
+        JavaScript.Parameter_0 arg0;
+        JavaScript.Environment_this r0;
+        JavaScript.Object 1337, r13, r12;
+        JavaScript.Number_1337 r3;
+        JavaScript.Undefined r1;
+        JavaScript.Function.HermesByteCode.magic r4;
+        Hbc.GlobalObject r2;
+
+        arg0 := @parameter0: JavaScript.Parameter_0;
+
+        staticinvoke <Hbc.Opcode: void declareGlobalVar(JavaScript.Object)>("magic");
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this CreateEnvironment()>();
+
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.Undefined LoadConstUndefined()>();
+
+        r2 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject GetGlobalObject()>();
+
+        r3 = staticinvoke <Hbc.Opcode: JavaScript.Number_1337 LoadConstInt(JavaScript.Number)>(1337);
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreNPToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 0, r1);
+
+        r4 = staticinvoke <Hbc.Opcode: JavaScript.Function.HermesByteCode.magic CreateClosure(JavaScript.Environment,int)>(r0, 1);
+
+        staticinvoke <Hbc.Opcode: void PutById(JavaScript.Object,JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, r4, 1, "magic");
+
+        r5 = r1;
+
+        r6 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.magic hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 1, "magic");
+
+        r13 = r1;
+
+        r7 = staticinvoke <Hbc.GlobalObject: Hbc.GlobalObject.magic.JavaScript.FunctionOutput magic(JavaScript.Object)>(r13);
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 0, r7);
+
+        r8 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this.index_0 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 0);
+
+        r13 = r1;
+
+        r12 = r3;
+
+        r9 = staticinvoke <JavaScript.Environment_this: JavaScript.Environment_this.index_0.JavaScript.FunctionOutput index_0(JavaScript.Object,JavaScript.Object)>(r13, r12);
+
+        r5 = r9;
+
+        r10 = r5;
+
+        return r10;
+    }
+
+    public static JavaScript.Function.HermesByteCode.magic.JavaScript.FunctionOutput magic(JavaScript.Object)
+    {
+        JavaScript.Function.HermesByteCode.calc r2;
+        JavaScript.Undefined r1;
+        JavaScript.Parameter_0 arg0;
+        JavaScript.Environment_this r0;
+
+        arg0 := @parameter0: JavaScript.Parameter_0;
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this CreateEnvironment()>();
+
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.Undefined LoadConstUndefined()>();
+
+        r2 = staticinvoke <Hbc.Opcode: JavaScript.Function.HermesByteCode.calc CreateClosure(JavaScript.Environment,int)>(r0, 2);
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 0, r2);
+
+        return r2;
+    }
+
+    public static JavaScript.Function.HermesByteCode.calc.JavaScript.FunctionOutput calc(JavaScript.Object, JavaScript.Object)
+    {
+        JavaScript.Parameter_1 arg1;
+        JavaScript.Environment_this.index_0 r4;
+        JavaScript.Parameter_0 arg0;
+        JavaScript.Environment_this r0;
+        JavaScript.Object 42;
+        JavaScript.Number r5;
+        JavaScript.Object.Funciton.Parameter_1 r1;
+        JavaScript.Undefined r3;
+        JavaScript.Number_42 r2;
+
+        arg0 := @parameter0: JavaScript.Parameter_0;
+
+        arg1 := @parameter1: JavaScript.Parameter_1;
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this CreateEnvironment()>();
+
+        r1 = arg1;
+
+        r2 = staticinvoke <Hbc.Opcode: JavaScript.Number_42 LoadConstUInt8(JavaScript.Number)>(42);
+
+        r3 = staticinvoke <Hbc.Opcode: JavaScript.Undefined LoadConstUndefined()>();
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 0, r1);
+
+        r4 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this.index_0 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 0);
+
+        r5 = staticinvoke <Hbc.Opcode: JavaScript.Number Mul(JavaScript.Object,JavaScript.Object)>(r4, r2);
+
+        return r5;
+    }
+}

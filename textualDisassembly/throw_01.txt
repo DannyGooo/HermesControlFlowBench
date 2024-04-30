@@ -1,0 +1,202 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 4
+  String count: 17
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..-1]: 
+s1[ASCII, 0..0]: 1
+s2[ASCII, 1..1]: 2
+s3[ASCII, 2..21]: Can only add numbers
+s4[ASCII, 22..27]: bigint
+s5[ASCII, 28..33]: global
+s6[ASCII, 34..39]: number
+i7[ASCII, 40..48] #931326BA: TypeError
+i8[ASCII, 49..55] #629A2BFD: console
+i9[ASCII, 56..60] #2CC2B0DA: error
+i10[ASCII, 61..65] #DE0F2B3D: every
+i11[ASCII, 66..73] #8FEF1F25: includes
+i12[ASCII, 74..82] #C5EBFA1C: isNumeric
+i13[ASCII, 83..85] #1C35E808: log
+i14[ASCII, 86..94] #807C5F3D: prototype
+i15[ASCII, 95..100] #0DA8F6EA: reduce
+i16[ASCII, 101..103] #BA21B760: sum
+
+Array Buffer:
+[String 6]
+[String 4]
+Function<global>(1 params, 27 registers, 1 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    DeclareGlobalVar  "isNumeric"
+    DeclareGlobalVar  "sum"
+    CreateEnvironment r0
+    GetGlobalObject   r1
+    LoadConstUndefined r2
+    LoadConstUInt8    r3, 1
+    LoadConstUInt8    r4, 2
+    LoadConstUInt8    r5, 3
+    LoadConstString   r6, "1"
+    LoadConstString   r7, "2"
+    CreateClosure     r8, r0, 1
+    PutById           r1, r8, 1, "isNumeric"
+    CreateClosure     r9, r0, 2
+    PutById           r1, r9, 2, "sum"
+    Mov               r10, r2
+    TryGetById        r11, r1, 1, "console"
+    GetByIdShort      r12, r11, 2, "log"
+    GetByIdShort      r13, r1, 3, "sum"
+    Mov               r20, r2
+    Mov               r19, r3
+    Mov               r18, r4
+    Mov               r17, r5
+    Call              r14, r13, 4
+    Mov               r20, r11
+    Mov               r19, r14
+    Call              r15, r12, 2
+    Mov               r10, r15
+L4:
+    GetByIdShort      r3, r1, 3, "sum"
+    Mov               r20, r2
+    Mov               r19, r6
+    Mov               r18, r7
+    Call              r4, r3, 3
+    Mov               r10, r4
+L5:
+    Jmp               L2
+L1:
+    Catch             r3
+    StoreToEnvironment r0, 0, r3
+    TryGetById        r4, r1, 1, "console"
+    GetByIdShort      r5, r4, 4, "error"
+    LoadFromEnvironment r8, r0, 0
+    Mov               r20, r4
+    Mov               r19, r8
+    Call              r9, r5, 2
+    Mov               r10, r9
+L2:
+    Mov               r3, r10
+    Ret               r3
+
+Exception Handlers:
+0: start = L4, end = L5, target = L1
+
+Function<isNumeric>(2 params, 17 registers, 1 symbols):
+Offset in debug table: source 0x002e, lexical 0x0000
+    CreateEnvironment r0
+    LoadParam         r1, 1
+    LoadConstUndefined r2
+    StoreToEnvironment r0, 0, r1
+    NewArrayWithBuffer r3, 2, 2, 0
+    GetByIdShort      r4, r3, 1, "includes"
+    LoadFromEnvironment r5, r0, 0
+    TypeOf            r6, r5
+    Mov               r10, r3
+    Mov               r9, r6
+    Call              r7, r4, 2
+    Ret               r7
+
+Function<sum>(2 params, 21 registers, 3 symbols):
+Offset in debug table: source 0x0038, lexical 0x0000
+    CreateEnvironment r0
+    LoadThisNS        r1
+    LoadConstZero     r2
+    GetGlobalObject   r3
+    LoadConstString   r4, "Can only add numbers"
+    LoadConstUndefined r5
+    StoreToEnvironment r0, 0, r1
+    GetNewTarget      r6
+    StoreToEnvironment r0, 1, r6
+    Mov               r13, r2
+    CallBuiltin       r7, "HermesBuiltin.copyRestArgs", 2
+    StoreToEnvironment r0, 2, r7
+    LoadFromEnvironment r8, r0, 2
+    GetByIdShort      r9, r8, 1, "every"
+    GetByIdShort      r10, r3, 2, "isNumeric"
+    Mov               r14, r8
+    Mov               r13, r10
+    Call              r11, r9, 2
+    JmpTrue           L1, r11
+    TryGetById        r1, r3, 3, "TypeError"
+    GetByIdShort      r2, r1, 4, "prototype"
+    CreateThis        r6, r2, r1
+    Mov               r14, r6
+    Mov               r13, r4
+    Construct         r7, r1, 2
+    SelectObject      r8, r6, r7
+    Throw             r8
+L1:
+    LoadFromEnvironment r1, r0, 2
+    GetByIdShort      r2, r1, 5, "reduce"
+    CreateClosure     r6, r0, 3
+    Mov               r14, r1
+    Mov               r13, r6
+    Call              r7, r2, 2
+    Ret               r7
+
+NCFunction<>(3 params, 8 registers, 2 symbols):
+Offset in debug table: source 0x005d, lexical 0x0000
+    CreateEnvironment r0
+    LoadParam         r1, 1
+    LoadParam         r2, 2
+    LoadConstUndefined r3
+    StoreToEnvironment r0, 0, r1
+    StoreToEnvironment r0, 1, r2
+    LoadFromEnvironment r4, r0, 0
+    LoadFromEnvironment r5, r0, 1
+    Add               r6, r4, r5
+    Ret               r6
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/throw/throw_01.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 38: line 1 col 1
+    bc 49: line 1 col 1
+    bc 58: line 12 col 3
+    bc 64: line 12 col 14
+    bc 69: line 12 col 15
+    bc 86: line 12 col 18
+    bc 96: line 12 col 14
+    bc 103: line 14 col 5
+    bc 117: line 14 col 8
+    bc 124: line 15 col 3
+    bc 126: line 15 col 5
+    bc 132: line 16 col 5
+    bc 138: line 16 col 18
+    bc 153: line 16 col 18
+  0x002e  function idx 1, starts at line 1 col 1
+    bc 19: line 2 col 41
+    bc 37: line 2 col 41
+  0x0038  function idx 2, starts at line 5 col 3
+    bc 27: line 5 col 3
+    bc 39: line 6 col 22
+    bc 44: line 6 col 23
+    bc 55: line 6 col 22
+    bc 62: line 7 col 17
+    bc 68: line 7 col 26
+    bc 73: line 7 col 26
+    bc 83: line 7 col 26
+    bc 91: line 7 col 7
+    bc 97: line 9 col 25
+    bc 113: line 9 col 25
+  0x005d  function idx 3, starts at line 9 col 26
+    bc 26: line 9 col 36
+  0x0064  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

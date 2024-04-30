@@ -1,0 +1,58 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 5
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..5]: global
+i1[ASCII, 6..9] #B0F82D55: exec
+i2[ASCII, 10..14] #3DA68E33: match
+i3[ASCII, 15..20] #9F338979: regexp
+i4[ASCII, 21..23] #BA51C58C: str
+
+Function<global>(1 params, 15 registers, 0 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r0
+    GetGlobalObject   r1
+    Mov               r2, r0
+L1:
+    TryGetById        r0, r1, 1, "regexp"
+    GetByIdShort      r3, r0, 2, "exec"
+    TryGetById        r4, r1, 3, "str"
+    Mov               r8, r0
+    Mov               r7, r4
+    Call              r5, r3, 2
+    PutById           r1, r5, 1, "match"
+    JmpTrue           L1, r5
+    Mov               r0, r2
+    Ret               r0
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/doWhile/doWhile_02.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 9: line 3 col 21
+    bc 15: line 3 col 32
+    bc 20: line 3 col 33
+    bc 32: line 3 col 32
+    bc 36: line 3 col 19
+  0x0013  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

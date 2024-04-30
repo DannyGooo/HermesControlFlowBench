@@ -1,0 +1,106 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 10
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..5]: global
+i1[ASCII, 6..15] #C032C135: NodeFilter
+i2[ASCII, 16..27] #E0F8AC05: SHOW_COMMENT
+i3[ASCII, 28..34] #629A2BFD: console
+i4[ASCII, 35..52] #98050BA6: createNodeIterator
+i5[ASCII, 53..60] #FDA9D117: document
+i6[ASCII, 61..63] #1C35E808: log
+i7[ASCII, 64..71] #9920DFD0: nextNode
+i8[ASCII, 72..82] #14F20A37: textContent
+i9[ASCII, 83..86] #CE1A0C7C: trim
+
+Function<global>(1 params, 21 registers, 2 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    GetGlobalObject   r2
+    LoadConstNull     r3
+    StoreNPToEnvironment r0, 0, r1
+    StoreNPToEnvironment r0, 1, r1
+    Mov               r4, r1
+    TryGetById        r5, r2, 1, "document"
+    GetByIdShort      r6, r5, 2, "createNodeIterator"
+    TryGetById        r7, r2, 1, "document"
+    TryGetById        r8, r2, 3, "NodeFilter"
+    GetByIdShort      r9, r8, 4, "SHOW_COMMENT"
+    Mov               r14, r5
+    Mov               r13, r7
+    Mov               r12, r9
+    Call              r10, r6, 3
+    StoreToEnvironment r0, 0, r10
+    StoreNPToEnvironment r0, 1, r1
+    LoadFromEnvironment r1, r0, 0
+    GetByIdShort      r5, r1, 5, "nextNode"
+    Mov               r14, r1
+    Call              r6, r5, 1
+    StoreToEnvironment r0, 1, r6
+    StrictNeq         r7, r6, r3
+    JmpFalse          L1, r7
+L2:
+    TryGetById        r1, r2, 6, "console"
+    GetByIdShort      r5, r1, 7, "log"
+    LoadFromEnvironment r6, r0, 1
+    GetByIdShort      r7, r6, 8, "textContent"
+    GetByIdShort      r8, r7, 9, "trim"
+    Mov               r14, r7
+    Call              r9, r8, 1
+    Mov               r14, r1
+    Mov               r13, r9
+    Call              r10, r5, 2
+    Mov               r4, r10
+    LoadFromEnvironment r1, r0, 0
+    GetByIdShort      r5, r1, 5, "nextNode"
+    Mov               r14, r1
+    Call              r6, r5, 1
+    StoreToEnvironment r0, 1, r6
+    StrictNeq         r7, r6, r3
+    JmpTrue           L2, r7
+L1:
+    Mov               r1, r4
+    Ret               r1
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/while/while_03.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 2 col 1
+    bc 19: line 2 col 18
+    bc 25: line 2 col 45
+    bc 30: line 2 col 46
+    bc 36: line 2 col 56
+    bc 42: line 2 col 66
+    bc 56: line 2 col 45
+    bc 72: line 4 col 40
+    bc 80: line 4 col 40
+    bc 95: line 5 col 5
+    bc 101: line 5 col 16
+    bc 110: line 5 col 28
+    bc 115: line 5 col 45
+    bc 123: line 5 col 45
+    bc 133: line 5 col 16
+    bc 144: line 4 col 40
+    bc 152: line 4 col 40
+  0x0034  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

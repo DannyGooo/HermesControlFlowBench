@@ -1,0 +1,172 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 20
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..0]: .
+s1[ASCII, 1..6]: Apples
+s2[ASCII, 7..31]: Apples are $0.32 a pound.
+s3[ASCII, 32..38]: Bananas
+s4[ASCII, 39..64]: Bananas are $0.48 a pound.
+s5[ASCII, 65..72]: Cherries
+s6[ASCII, 73..99]: Cherries are $3.00 a pound.
+s7[ASCII, 100..133]: Is there anything else you'd like?
+s8[ASCII, 134..140]: Mangoes
+s9[ASCII, 141..178]: Mangoes and papayas are $2.79 a pound.
+s10[ASCII, 179..185]: Oranges
+s11[ASCII, 186..211]: Oranges are $0.59 a pound.
+s12[ASCII, 212..218]: Papayas
+s13[ASCII, 219..239]: Sorry, we are out of 
+s14[ASCII, 240..245]: global
+i15[ASCII, 246..259] #85BBF6F9: HermesInternal
+i16[ASCII, 260..265] #CB8DFA65: concat
+i17[ASCII, 266..272] #629A2BFD: console
+i18[ASCII, 273..276] #B008B576: expr
+i19[ASCII, 277..279] #1C35E808: log
+
+Function<global>(1 params, 34 registers, 0 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r0
+    GetGlobalObject   r1
+    LoadConstString   r2, "Is there anything else you'd like?"
+    LoadConstString   r3, "Oranges are $0.59 a pound."
+    LoadConstString   r4, "Apples are $0.32 a pound."
+    LoadConstString   r5, "Bananas are $0.48 a pound."
+    LoadConstString   r6, "Cherries are $3.00 a pound."
+    LoadConstString   r7, "Mangoes and papayas are $2.79 a pound."
+    LoadConstString   r8, "Sorry, we are out of "
+    LoadConstString   r9, "."
+    LoadConstString   r10, "Papayas"
+    LoadConstString   r11, "Mangoes"
+    LoadConstString   r12, "Cherries"
+    LoadConstString   r13, "Bananas"
+    LoadConstString   r14, "Apples"
+    LoadConstString   r15, "Oranges"
+    Mov               r16, r0
+    TryGetById        r17, r1, 1, "expr"
+    StrictEq          r0, r15, r17
+    JmpTrueLong       L1, r0
+    StrictEq          r0, r14, r17
+    JmpTrueLong       L2, r0
+    StrictEq          r0, r13, r17
+    JmpTrueLong       L3, r0
+    StrictEq          r0, r12, r17
+    JmpTrue           L4, r0
+    StrictEq          r0, r11, r17
+    JmpTrue           L5, r0
+    StrictEq          r0, r10, r17
+    JmpTrue           L5, r0
+    TryGetById        r0, r1, 2, "console"
+    GetByIdShort      r18, r0, 3, "log"
+    TryGetById        r19, r1, 1, "expr"
+    TryGetById        r20, r1, 4, "HermesInternal"
+    GetByIdShort      r21, r20, 5, "concat"
+    Mov               r27, r8
+    Mov               r26, r19
+    Mov               r25, r9
+    Call              r22, r21, 3
+    Mov               r27, r0
+    Mov               r26, r22
+    Call              r23, r18, 2
+    Mov               r16, r23
+    JmpLong           L6
+L5:
+    TryGetById        r0, r1, 2, "console"
+    GetByIdShort      r18, r0, 3, "log"
+    Mov               r27, r0
+    Mov               r26, r7
+    Call              r19, r18, 2
+    Mov               r16, r19
+    Jmp               L6
+L4:
+    TryGetById        r0, r1, 2, "console"
+    GetByIdShort      r18, r0, 3, "log"
+    Mov               r27, r0
+    Mov               r26, r6
+    Call              r19, r18, 2
+    Mov               r16, r19
+    Jmp               L6
+L3:
+    TryGetById        r0, r1, 2, "console"
+    GetByIdShort      r18, r0, 3, "log"
+    Mov               r27, r0
+    Mov               r26, r5
+    Call              r19, r18, 2
+    Mov               r16, r19
+    Jmp               L6
+L2:
+    TryGetById        r0, r1, 2, "console"
+    GetByIdShort      r18, r0, 3, "log"
+    Mov               r27, r0
+    Mov               r26, r4
+    Call              r19, r18, 2
+    Mov               r16, r19
+    Jmp               L6
+L1:
+    TryGetById        r0, r1, 2, "console"
+    GetByIdShort      r18, r0, 3, "log"
+    Mov               r27, r0
+    Mov               r26, r3
+    Call              r19, r18, 2
+    Mov               r16, r19
+L6:
+    TryGetById        r0, r1, 2, "console"
+    GetByIdShort      r18, r0, 3, "log"
+    Mov               r27, r0
+    Mov               r26, r2
+    Call              r19, r18, 2
+    Mov               r16, r19
+    Mov               r20, r16
+    Ret               r20
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/switch/switch_01.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 65: line 1 col 9
+    bc 122: line 19 col 7
+    bc 128: line 19 col 18
+    bc 133: line 19 col 43
+    bc 139: line 19 col 19
+    bc 145: line 19 col 19
+    bc 159: line 19 col 19
+    bc 169: line 19 col 18
+    bc 181: line 16 col 7
+    bc 187: line 16 col 18
+    bc 198: line 16 col 18
+    bc 207: line 12 col 7
+    bc 213: line 12 col 18
+    bc 224: line 12 col 18
+    bc 233: line 9 col 7
+    bc 239: line 9 col 18
+    bc 250: line 9 col 18
+    bc 259: line 6 col 7
+    bc 265: line 6 col 18
+    bc 276: line 6 col 18
+    bc 285: line 3 col 7
+    bc 291: line 3 col 18
+    bc 302: line 3 col 18
+    bc 309: line 22 col 3
+    bc 315: line 22 col 14
+    bc 326: line 22 col 14
+  0x0053  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

@@ -1,0 +1,71 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 4
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..5]: global
+i1[ASCII, 6..12] #629A2BFD: console
+i2[ASCII, 13..17] #2CC2B0DA: error
+i3[ASCII, 18..36] #49E23581: nonExistentFunction
+
+Function<global>(1 params, 18 registers, 1 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    GetGlobalObject   r2
+    Mov               r3, r1
+L4:
+    TryGetById        r4, r2, 1, "nonExistentFunction"
+    Mov               r11, r1
+    Call              r5, r4, 1
+    Mov               r3, r5
+L5:
+    Jmp               L2
+L1:
+    Catch             r4
+    StoreToEnvironment r0, 0, r4
+    TryGetById        r5, r2, 2, "console"
+    GetByIdShort      r6, r5, 3, "error"
+    LoadFromEnvironment r7, r0, 0
+    Mov               r11, r5
+    Mov               r10, r7
+    Call              r8, r6, 2
+    Mov               r3, r8
+L2:
+    Mov               r4, r3
+    Ret               r4
+
+Exception Handlers:
+0: start = L4, end = L5, target = L1
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/tryCatch/tryCatch_00.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 9: line 2 col 5
+    bc 18: line 2 col 24
+    bc 25: line 3 col 3
+    bc 27: line 3 col 5
+    bc 33: line 4 col 5
+    bc 39: line 4 col 18
+    bc 54: line 4 col 18
+  0x0019  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

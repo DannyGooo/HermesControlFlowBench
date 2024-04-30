@@ -1,0 +1,194 @@
+public class HermesByteCode
+{
+
+    public static JavaScript.Function.HermesByteCode.global.JavaScript.FunctionOutput global(JavaScript.Object)
+    {
+        JavaScript.FunctionOutput r4, r5, r10;
+        JavaScript.IteratorBegin r8;
+        JavaScript.Exception Catch;
+        JavaScript.Environment_this.index_0 r9;
+        JavaScript.Parameter_0 arg0;
+        JavaScript.Environment_this r0;
+        JavaScript.Object r13, r12;
+        Hbc.GlobalObject.console.log r6;
+        JavaScript.IteratorNext r3;
+        JavaScript.Undefined r1;
+        JavaScript.Environment.index_1 r7;
+        Hbc.GlobalObject r2;
+
+        arg0 := @parameter0: JavaScript.Parameter_0;
+
+        staticinvoke <Hbc.Opcode: void declareGlobalVar(JavaScript.Object)>("source");
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this CreateEnvironment()>();
+
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.Undefined LoadConstUndefined()>();
+
+        r2 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject GetGlobalObject()>();
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreNPToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 0, r1);
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreNPToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 1, r1);
+
+        r3 = staticinvoke <Hbc.Opcode: JavaScript.Function.HermesByteCode.source CreateGeneratorClosure(JavaScript.Environment,int)>(r0, 1);
+
+        staticinvoke <Hbc.Opcode: void PutById(JavaScript.Object,JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, r3, 1, "source");
+
+        r4 = r1;
+
+        r5 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.source hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 1, "source");
+
+        r13 = r1;
+
+        r6 = staticinvoke <Hbc.GlobalObject: Hbc.GlobalObject.source.JavaScript.FunctionOutput source(JavaScript.Object)>(r13);
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 0, r6);
+
+        r7 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this.index_0 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 0);
+
+        r9 = r7;
+
+        r10 = staticinvoke <Hbc.Opcode: JavaScript.IteratorBegin IteratorBegin(JavaScript.Object)>(r9);
+
+        r8 = r10;
+
+     label1:
+        r3 = staticinvoke <Hbc.Opcode: JavaScript.IteratorNext IteratorNext(JavaScript.Object,JavaScript.Object)>(r8, r9);
+
+        r5 = r8;
+
+        r6 = staticinvoke <Hbc.Opcode: JavaScript.Boolean StrictEq(JavaScript.Object,JavaScript.Object)>(r5, r1);
+
+        if r6 == 1 goto label5;
+
+     label2:
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 1, r3);
+
+        r5 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.console hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 2, "console");
+
+        r6 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.console.log hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r5, 3, "log");
+
+        r7 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_1 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 1);
+
+        r13 = r5;
+
+        r12 = r7;
+
+        r10 = staticinvoke <Hbc.GlobalObject.console: Hbc.GlobalObject.console.log.JavaScript.FunctionOutput log(JavaScript.Object,JavaScript.Object)>(r13, r12);
+
+        r4 = r10;
+
+     label3:
+        goto label1;
+
+     label4:
+        Catch := @caughtexception;
+
+        staticinvoke <Hbc.Opcode: JavaScript.IteratorClose IteratorClose(JavaScript.Object,JavaScript.Boolean)>(r8, 1);
+
+        throw r5;
+
+     label5:
+        r5 = r4;
+
+        return r5;
+
+        catch JavaScript.Exception from label2 to label3 with label4;
+    }
+
+    public static JavaScript.Function.HermesByteCode.source.JavaScript.FunctionOutput source(JavaScript.Object)
+    {
+        JavaScript.Parameter_0 arg0;
+        JavaScript.Function.HermesByteCode.?anon_0_source r1;
+        JavaScript.Environment_this r0;
+
+        arg0 := @parameter0: JavaScript.Parameter_0;
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this CreateEnvironment()>();
+
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.Function.HermesByteCode.?anon_0_source CreateGenerator(JavaScript.Environment,int)>(r0, 2);
+
+        return r1;
+    }
+
+    public static JavaScript.Function.HermesByteCode.?anon_0_source.JavaScript.FunctionOutput ?anon_0_source(JavaScript.Object)
+    {
+        JavaScript.Undefined r3;
+        JavaScript.Parameter_0 arg0;
+        JavaScript.Object 1, 2, 3, r5, r4, r6, r7, r8, r9, r10, r11;
+        JavaScript.Number_2 r1;
+        JavaScript.Number_1 r0;
+        JavaScript.Number_3 r2;
+
+        arg0 := @parameter0: JavaScript.Parameter_0;
+
+        staticinvoke <Hbc.Opcode: void StartGenerator()>();
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this CreateEnvironment()>();
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Number_1 LoadConstUInt8(JavaScript.Number)>(1);
+
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.Number_2 LoadConstUInt8(JavaScript.Number)>(2);
+
+        r2 = staticinvoke <Hbc.Opcode: JavaScript.Number_3 LoadConstUInt8(JavaScript.Number)>(3);
+
+        r3 = staticinvoke <Hbc.Opcode: JavaScript.Undefined LoadConstUndefined()>();
+
+        staticinvoke <Hbc.Opcode: JavaScript.ResumeGenerator ResumeGenerator(JavaScript.Object,JavaScript.Boolean)>(r5, r4);
+
+        r6 = r4;
+
+        if r6 == 1 goto label7;
+
+        goto label1;
+
+     label1:
+        staticinvoke <Hbc.Opcode: JavaScript.ResumeGenerator ResumeGenerator(JavaScript.Object,JavaScript.Boolean)>(r6, r4);
+
+        r7 = r4;
+
+        if r7 == 1 goto label6;
+
+        goto label2;
+
+     label2:
+        staticinvoke <Hbc.Opcode: JavaScript.ResumeGenerator ResumeGenerator(JavaScript.Object,JavaScript.Boolean)>(r8, r7);
+
+        r9 = r7;
+
+        if r9 == 1 goto label5;
+
+        goto label3;
+
+     label3:
+        staticinvoke <Hbc.Opcode: JavaScript.ResumeGenerator ResumeGenerator(JavaScript.Object,JavaScript.Boolean)>(r10, r9);
+
+        r11 = r9;
+
+        if r11 == 1 goto label4;
+
+        staticinvoke <Hbc.Opcode: void CompleteGenerator()>();
+
+        return r3;
+
+     label4:
+        staticinvoke <Hbc.Opcode: void CompleteGenerator()>();
+
+        return r10;
+
+     label5:
+        staticinvoke <Hbc.Opcode: void CompleteGenerator()>();
+
+        return r8;
+
+     label6:
+        staticinvoke <Hbc.Opcode: void CompleteGenerator()>();
+
+        return r6;
+
+     label7:
+        staticinvoke <Hbc.Opcode: void CompleteGenerator()>();
+
+        return r5;
+    }
+}

@@ -1,0 +1,147 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 2
+  String count: 16
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..18]: " element:\x0A  left: 
+s1[ASCII, 19..38]: Offset position of "
+s2[ASCII, 39..45]: content
+s3[ASCII, 46..51]: global
+s4[ASCII, 52..54]: px;
+s5[ASCII, 55..65]: px;\x0A  top: 
+i6[ASCII, 66..79] #85BBF6F9: HermesInternal
+i7[ASCII, 80..85] #CB8DFA65: concat
+i8[ASCII, 86..92] #629A2BFD: console
+i9[ASCII, 93..100] #FDA9D117: document
+i10[ASCII, 101..114] #04233820: getElementById
+i11[ASCII, 115..117] #1C35E808: log
+i12[ASCII, 118..127] #C4033507: offsetLeft
+i13[ASCII, 128..139] #77155E26: offsetParent
+i14[ASCII, 140..148] #176F5369: offsetTop
+i15[ASCII, 149..161] #A05CC5BD: showOffsetPos
+
+Function<global>(1 params, 18 registers, 0 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    DeclareGlobalVar  "showOffsetPos"
+    CreateEnvironment r0
+    GetGlobalObject   r1
+    LoadConstUndefined r2
+    LoadConstString   r3, "content"
+    CreateClosure     r4, r0, 1
+    PutById           r1, r4, 1, "showOffsetPos"
+    Mov               r5, r2
+    GetByIdShort      r6, r1, 1, "showOffsetPos"
+    Mov               r11, r2
+    Mov               r10, r3
+    Call              r7, r6, 2
+    Mov               r5, r7
+    Mov               r8, r5
+    Ret               r8
+
+Function<showOffsetPos>(2 params, 31 registers, 4 symbols):
+Offset in debug table: source 0x000d, lexical 0x0000
+    CreateEnvironment r0
+    LoadParam         r1, 1
+    LoadConstUndefined r2
+    LoadConstZero     r3
+    GetGlobalObject   r4
+    LoadConstString   r5, "Offset position of ""
+    LoadConstString   r6, "" element:
+  left: "
+    LoadConstString   r7, "px;
+  top: "
+    LoadConstString   r8, "px;"
+    StoreNPToEnvironment r0, 0, r2
+    StoreNPToEnvironment r0, 1, r2
+    StoreNPToEnvironment r0, 2, r2
+    StoreToEnvironment r0, 3, r1
+    StoreNPToEnvironment r0, 0, r3
+    StoreNPToEnvironment r0, 1, r3
+    TryGetById        r9, r4, 1, "document"
+    GetByIdShort      r10, r9, 2, "getElementById"
+    LoadFromEnvironment r11, r0, 3
+    Mov               r24, r9
+    Mov               r23, r11
+    Call              r12, r10, 2
+    StoreToEnvironment r0, 2, r12
+    LoadFromEnvironment r1, r0, 2
+    JmpFalse          L1, r1
+L2:
+    LoadFromEnvironment r1, r0, 0
+    LoadFromEnvironment r3, r0, 2
+    GetByIdShort      r9, r3, 3, "offsetLeft"
+    Add               r10, r1, r9
+    StoreToEnvironment r0, 0, r10
+    LoadFromEnvironment r11, r0, 1
+    LoadFromEnvironment r12, r0, 2
+    GetByIdShort      r13, r12, 4, "offsetTop"
+    Add               r14, r11, r13
+    StoreToEnvironment r0, 1, r14
+    LoadFromEnvironment r15, r0, 2
+    GetByIdShort      r16, r15, 5, "offsetParent"
+    StoreToEnvironment r0, 2, r16
+    LoadFromEnvironment r1, r0, 2
+    JmpTrue           L2, r1
+L1:
+    TryGetById        r1, r4, 6, "console"
+    GetByIdShort      r3, r1, 7, "log"
+    LoadFromEnvironment r9, r0, 3
+    LoadFromEnvironment r10, r0, 0
+    LoadFromEnvironment r11, r0, 1
+    TryGetById        r12, r4, 8, "HermesInternal"
+    GetByIdShort      r13, r12, 9, "concat"
+    Mov               r24, r5
+    Mov               r23, r9
+    Mov               r22, r6
+    Mov               r21, r10
+    Mov               r20, r7
+    Mov               r19, r11
+    Mov               r18, r8
+    Call              r14, r13, 7
+    Mov               r24, r1
+    Mov               r23, r14
+    Call              r15, r3, 2
+    Ret               r2
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/for/for_14.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 20: line 1 col 1
+    bc 29: line 19 col 3
+    bc 40: line 19 col 16
+  0x000d  function idx 1, starts at line 1 col 1
+    bc 51: line 5 col 20
+    bc 57: line 5 col 43
+    bc 72: line 5 col 43
+    bc 95: line 7 col 21
+    bc 100: line 7 col 12
+    bc 116: line 8 col 22
+    bc 121: line 8 col 13
+    bc 133: line 9 col 24
+    bc 149: line 12 col 5
+    bc 155: line 12 col 16
+    bc 172: line 13 col 7
+    bc 178: line 13 col 7
+    bc 204: line 13 col 7
+    bc 214: line 12 col 16
+  0x003b  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

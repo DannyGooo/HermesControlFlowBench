@@ -1,0 +1,156 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 12
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..0]: !
+s1[ASCII, 1..1]: ?
+s2[ASCII, 2..4]: Is 
+s3[ASCII, 5..8]: Name
+s4[ASCII, 9..16]: Output: 
+s5[ASCII, 17..49]: Please pick a number from 0 to 5!
+s6[ASCII, 50..52]: So 
+s7[ASCII, 53..57]: What 
+s8[ASCII, 58..62]: Your 
+s9[ASCII, 63..68]: global
+i10[ASCII, 69..75] #629A2BFD: console
+i11[ASCII, 76..78] #1C35E808: log
+
+Function<global>(1 params, 33 registers, 2 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    LoadConstUInt8    r2, 1
+    LoadConstString   r3, "Output: "
+    LoadConstString   r4, "So "
+    LoadConstString   r5, "What "
+    LoadConstString   r6, "Is "
+    LoadConstString   r7, "Your "
+    LoadConstString   r8, "Name"
+    LoadConstString   r9, "?"
+    GetGlobalObject   r10
+    LoadConstString   r11, "!"
+    LoadConstString   r12, "Please pick a number from 0 to 5!"
+    LoadConstUInt8    r13, 5
+    LoadConstUInt8    r14, 4
+    LoadConstUInt8    r15, 3
+    LoadConstUInt8    r16, 2
+    LoadConstZero     r17
+    StoreNPToEnvironment r0, 0, r1
+    StoreNPToEnvironment r0, 1, r1
+    Mov               r18, r1
+    StoreNPToEnvironment r0, 0, r2
+    StoreToEnvironment r0, 1, r3
+    LoadFromEnvironment r19, r0, 0
+    StrictEq          r1, r17, r19
+    JmpTrue           L1, r1
+    StrictEq          r1, r2, r19
+    JmpTrueLong       L2, r1
+    StrictEq          r1, r16, r19
+    JmpTrueLong       L3, r1
+    StrictEq          r1, r15, r19
+    JmpTrueLong       L4, r1
+    StrictEq          r1, r14, r19
+    JmpTrueLong       L5, r1
+    StrictEq          r1, r13, r19
+    JmpTrue           L6, r1
+    TryGetById        r1, r10, 1, "console"
+    GetByIdShort      r3, r1, 2, "log"
+    Mov               r26, r1
+    Mov               r25, r12
+    Call              r20, r3, 2
+    Mov               r18, r20
+    JmpLong           L7
+L6:
+    LoadFromEnvironment r1, r0, 1
+    Add               r3, r1, r11
+    StoreToEnvironment r0, 1, r3
+    Mov               r18, r3
+    TryGetById        r20, r10, 1, "console"
+    GetByIdShort      r21, r20, 2, "log"
+    LoadFromEnvironment r22, r0, 1
+    Mov               r26, r20
+    Mov               r25, r22
+    Call              r23, r21, 2
+    Mov               r18, r23
+    Jmp               L7
+L1:
+    LoadFromEnvironment r1, r0, 1
+    Add               r3, r1, r4
+    StoreToEnvironment r0, 1, r3
+    Mov               r18, r3
+L2:
+    LoadFromEnvironment r1, r0, 1
+    Add               r3, r1, r5
+    StoreToEnvironment r0, 1, r3
+    Mov               r18, r3
+    LoadFromEnvironment r20, r0, 1
+    Add               r21, r20, r6
+    StoreToEnvironment r0, 1, r21
+    Mov               r18, r21
+L3:
+    LoadFromEnvironment r1, r0, 1
+    Add               r3, r1, r7
+    StoreToEnvironment r0, 1, r3
+    Mov               r18, r3
+L4:
+    LoadFromEnvironment r1, r0, 1
+    Add               r3, r1, r8
+    StoreToEnvironment r0, 1, r3
+    Mov               r18, r3
+L5:
+    LoadFromEnvironment r1, r0, 1
+    Add               r3, r1, r9
+    StoreToEnvironment r0, 1, r3
+    Mov               r18, r3
+    TryGetById        r20, r10, 1, "console"
+    GetByIdShort      r21, r20, 2, "log"
+    LoadFromEnvironment r22, r0, 1
+    Mov               r26, r20
+    Mov               r25, r22
+    Call              r23, r21, 2
+    Mov               r18, r23
+L7:
+    Mov               r1, r18
+    Ret               r1
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/switch/switch_04.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 136: line 22 col 5
+    bc 142: line 22 col 16
+    bc 153: line 22 col 16
+    bc 169: line 18 col 12
+    bc 180: line 19 col 5
+    bc 186: line 19 col 16
+    bc 201: line 19 col 16
+    bc 214: line 5 col 12
+    bc 229: line 7 col 12
+    bc 244: line 8 col 12
+    bc 259: line 10 col 12
+    bc 274: line 12 col 12
+    bc 289: line 14 col 12
+    bc 300: line 15 col 5
+    bc 306: line 15 col 16
+    bc 321: line 15 col 16
+  0x0035  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

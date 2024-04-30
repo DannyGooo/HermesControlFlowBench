@@ -1,0 +1,87 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 5
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..0]: 1
+s1[ASCII, 1..7]: default
+s2[ASCII, 8..13]: global
+i3[ASCII, 14..20] #629A2BFD: console
+i4[ASCII, 21..23] #1C35E808: log
+
+Function<global>(1 params, 19 registers, 1 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    LoadConstUInt8    r2, 5
+    GetGlobalObject   r3
+    LoadConstUInt8    r4, 2
+    LoadConstString   r5, "default"
+    LoadConstString   r6, "1"
+    LoadConstUInt8    r7, 1
+    StoreNPToEnvironment r0, 0, r1
+    Mov               r8, r1
+    StoreNPToEnvironment r0, 0, r2
+    LoadFromEnvironment r9, r0, 0
+    StrictEq          r0, r4, r9
+    JmpTrue           L1, r0
+    StrictEq          r0, r7, r9
+    JmpTrue           L2, r0
+    TryGetById        r0, r3, 1, "console"
+    GetByIdShort      r1, r0, 2, "log"
+    Mov               r12, r0
+    Mov               r11, r5
+    Call              r2, r1, 2
+    Mov               r8, r2
+L2:
+    TryGetById        r0, r3, 1, "console"
+    GetByIdShort      r1, r0, 2, "log"
+    Mov               r12, r0
+    Mov               r11, r6
+    Call              r2, r1, 2
+    Mov               r8, r2
+    Jmp               L3
+L1:
+    TryGetById        r0, r3, 1, "console"
+    GetByIdShort      r1, r0, 2, "log"
+    Mov               r12, r0
+    Mov               r11, r4
+    Call              r2, r1, 2
+    Mov               r8, r2
+L3:
+    Mov               r0, r8
+    Ret               r0
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/switch/switch_02.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 52: line 7 col 5
+    bc 58: line 7 col 16
+    bc 69: line 7 col 16
+    bc 76: line 10 col 5
+    bc 82: line 10 col 16
+    bc 93: line 10 col 16
+    bc 102: line 4 col 5
+    bc 108: line 4 col 16
+    bc 119: line 4 col 16
+  0x001f  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

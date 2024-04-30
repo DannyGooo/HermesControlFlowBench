@@ -1,0 +1,45 @@
+public class HermesByteCode
+{
+
+    public static JavaScript.Function.HermesByteCode.global.JavaScript.FunctionOutput global(JavaScript.Object)
+    {
+        JavaScript.FunctionOutput r5;
+        Hbc.GlobalObject.str r4;
+        Hbc.GlobalObject.regexp.exec r3;
+        JavaScript.Parameter_0 arg0;
+        JavaScript.Object r8, r7;
+        JavaScript.Undefined r0, r2;
+        Hbc.GlobalObject r1;
+
+        arg0 := @parameter0: JavaScript.Parameter_0;
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this CreateEnvironment()>();
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Undefined LoadConstUndefined()>();
+
+        r1 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject GetGlobalObject()>();
+
+        r2 = r0;
+
+     label1:
+        r0 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.regexp hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r1, 1, "regexp");
+
+        r3 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.regexp.exec hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r0, 2, "exec");
+
+        r4 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.str hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r1, 3, "str");
+
+        r8 = r0;
+
+        r7 = r4;
+
+        r5 = staticinvoke <Hbc.GlobalObject.regexp: Hbc.GlobalObject.regexp.exec.JavaScript.FunctionOutput exec(JavaScript.Object,JavaScript.Object)>(r8, r7);
+
+        staticinvoke <Hbc.Opcode: void PutById(JavaScript.Object,JavaScript.Object,JavaScript.Number,JavaScript.String)>(r1, r5, 1, "match");
+
+        if r5 == 1 goto label1;
+
+        r0 = r2;
+
+        return r0;
+    }
+}

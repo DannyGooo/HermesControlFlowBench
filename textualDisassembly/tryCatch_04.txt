@@ -1,0 +1,101 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 10
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..6]: finally
+s1[ASCII, 7..12]: global
+s2[ASCII, 13..16]: oops
+s3[ASCII, 17..21]: outer
+i4[ASCII, 22..26] #9102A3D0: Error
+i5[ASCII, 27..33] #629A2BFD: console
+i6[ASCII, 34..38] #2CC2B0DA: error
+i7[ASCII, 39..41] #1C35E808: log
+i8[ASCII, 42..48] #63D87C1C: message
+i9[ASCII, 49..57] #807C5F3D: prototype
+
+Function<global>(1 params, 22 registers, 1 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    GetGlobalObject   r2
+    LoadConstString   r3, "outer"
+    LoadConstString   r4, "finally"
+    LoadConstString   r5, "oops"
+    Mov               r6, r1
+L4:
+    TryGetById        r1, r2, 1, "Error"
+    GetByIdShort      r7, r1, 2, "prototype"
+    CreateThis        r8, r7, r1
+    Mov               r15, r8
+    Mov               r14, r5
+    Construct         r9, r1, 2
+    SelectObject      r10, r8, r9
+    Throw             r10
+L1:
+    Catch             r1
+    TryGetById        r7, r2, 3, "console"
+    GetByIdShort      r8, r7, 4, "log"
+    Mov               r15, r7
+    Mov               r14, r4
+    Call              r9, r8, 2
+    Mov               r6, r9
+    Throw             r1
+L2:
+    Catch             r1
+    StoreToEnvironment r0, 0, r1
+    TryGetById        r7, r2, 3, "console"
+    GetByIdShort      r8, r7, 5, "error"
+    LoadFromEnvironment r9, r0, 0
+    GetByIdShort      r10, r9, 6, "message"
+    Mov               r15, r7
+    Mov               r14, r3
+    Mov               r13, r10
+    Call              r11, r8, 3
+    Mov               r6, r11
+    Mov               r1, r6
+    Ret               r1
+
+Exception Handlers:
+0: start = L4, end = L1, target = L1
+1: start = L4, end = L2, target = L2
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/tryCatch/tryCatch_04.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 21: line 3 col 17
+    bc 27: line 3 col 22
+    bc 32: line 3 col 22
+    bc 42: line 3 col 22
+    bc 50: line 3 col 7
+    bc 52: line 4 col 15
+    bc 54: line 5 col 7
+    bc 60: line 5 col 18
+    bc 71: line 5 col 18
+    bc 78: line 6 col 5
+    bc 80: line 7 col 5
+    bc 86: line 8 col 5
+    bc 92: line 8 col 18
+    bc 101: line 8 col 30
+    bc 115: line 8 col 18
+  0x0031  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

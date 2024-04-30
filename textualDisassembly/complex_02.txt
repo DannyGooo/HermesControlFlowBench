@@ -1,0 +1,163 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 17
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..-1]: 
+s1[ASCII, 0..0]: .
+s2[ASCII, 1..2]: : 
+s3[ASCII, 3..9]: Mangoes
+s4[ASCII, 10..47]: Mangoes and papayas are $2.79 a pound.
+s5[ASCII, 48..54]: Oranges
+s6[ASCII, 55..80]: Oranges are $0.59 a pound.
+s7[ASCII, 81..87]: Papayas
+s8[ASCII, 88..108]: Sorry, we are out of 
+s9[ASCII, 109..114]: global
+i10[ASCII, 115..128] #85BBF6F9: HermesInternal
+i11[ASCII, 129..129] #00018270: a
+i12[ASCII, 130..130] #00018E43: b
+i13[ASCII, 131..131] #00018A52: c
+i14[ASCII, 132..137] #CB8DFA65: concat
+i15[ASCII, 138..144] #629A2BFD: console
+i16[ASCII, 145..147] #1C35E808: log
+
+Object Key Buffer:
+[String 11]
+[String 12]
+[String 13]
+Object Value Buffer:
+[int 1]
+[int 2]
+[int 3]
+Function<global>(1 params, 40 registers, 3 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    LoadConstString   r2, "Papayas"
+    GetGlobalObject   r3
+    LoadConstString   r4, "Oranges are $0.59 a pound."
+    LoadConstString   r5, ""
+    LoadConstString   r6, ": "
+    LoadConstString   r7, "Mangoes and papayas are $2.79 a pound."
+    LoadConstString   r8, "Sorry, we are out of "
+    LoadConstString   r9, "."
+    LoadConstString   r10, "Mangoes"
+    LoadConstString   r11, "Oranges"
+    StoreNPToEnvironment r0, 0, r1
+    StoreNPToEnvironment r0, 1, r1
+    StoreNPToEnvironment r0, 2, r1
+    Mov               r12, r1
+    NewObjectWithBuffer r13, 3, 3, 0, 0
+    StoreToEnvironment r0, 0, r13
+    StoreToEnvironment r0, 1, r2
+    LoadFromEnvironment r14, r0, 1
+    StrictEq          r1, r11, r14
+    JmpTrueLong       L1, r1
+    StrictEq          r1, r10, r14
+    JmpTrue           L2, r1
+    StrictEq          r1, r2, r14
+    JmpTrueLong       L3, r1
+    TryGetById        r1, r3, 1, "console"
+    GetByIdShort      r13, r1, 2, "log"
+    LoadFromEnvironment r15, r0, 1
+    TryGetById        r16, r3, 3, "HermesInternal"
+    GetByIdShort      r17, r16, 4, "concat"
+    Mov               r33, r8
+    Mov               r32, r15
+    Mov               r31, r9
+    Call              r18, r17, 3
+    Mov               r33, r1
+    Mov               r32, r18
+    Call              r19, r13, 2
+    Mov               r12, r19
+    JmpLong           L4
+L2:
+    LoadFromEnvironment r17, r0, 0
+    Mov               r13, r17
+    GetPNameList      r1, r13, r15, r16
+    JmpUndefined      L3, r1
+L5:
+    GetNextPName      r18, r1, r13, r15, r16
+    JmpUndefined      L3, r18
+    Mov               r17, r18
+    StoreToEnvironment r0, 2, r17
+    TryGetById        r19, r3, 1, "console"
+    GetByIdShort      r20, r19, 2, "log"
+    LoadFromEnvironment r21, r0, 2
+    LoadFromEnvironment r22, r0, 0
+    LoadFromEnvironment r23, r0, 2
+    GetByVal          r24, r22, r23
+    TryGetById        r25, r3, 3, "HermesInternal"
+    GetByIdShort      r26, r25, 4, "concat"
+    Mov               r33, r5
+    Mov               r32, r21
+    Mov               r31, r6
+    Mov               r30, r24
+    Call              r27, r26, 4
+    Mov               r33, r19
+    Mov               r32, r27
+    Call              r28, r20, 2
+    Mov               r12, r28
+    Jmp               L5
+L3:
+    TryGetById        r17, r3, 1, "console"
+    GetByIdShort      r19, r17, 2, "log"
+    Mov               r33, r17
+    Mov               r32, r7
+    Call              r20, r19, 2
+    Mov               r12, r20
+    Jmp               L4
+L1:
+    TryGetById        r17, r3, 1, "console"
+    GetByIdShort      r19, r17, 2, "log"
+    Mov               r33, r17
+    Mov               r32, r4
+    Call              r20, r19, 2
+    Mov               r12, r20
+L4:
+    Mov               r17, r12
+    Ret               r17
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/complex/complex_02.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 106: line 20 col 5
+    bc 112: line 20 col 16
+    bc 121: line 20 col 17
+    bc 127: line 20 col 17
+    bc 141: line 20 col 17
+    bc 151: line 20 col 16
+    bc 194: line 12 col 9
+    bc 200: line 12 col 20
+    bc 217: line 12 col 43
+    bc 221: line 12 col 21
+    bc 227: line 12 col 21
+    bc 244: line 12 col 21
+    bc 254: line 12 col 20
+    bc 263: line 16 col 5
+    bc 269: line 16 col 16
+    bc 280: line 16 col 16
+    bc 289: line 8 col 5
+    bc 295: line 8 col 16
+    bc 306: line 8 col 16
+  0x003e  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

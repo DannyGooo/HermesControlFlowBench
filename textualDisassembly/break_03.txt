@@ -1,0 +1,57 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 6
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..0]: 1
+s1[ASCII, 1..1]: 2
+s2[ASCII, 2..4]: :-(
+s3[ASCII, 5..10]: global
+i4[ASCII, 11..17] #629A2BFD: console
+i5[ASCII, 18..20] #1C35E808: log
+
+Function<global>(1 params, 18 registers, 0 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r0
+    GetGlobalObject   r1
+    LoadConstString   r2, "1"
+    LoadConstString   r3, "2"
+    LoadConstString   r4, ":-("
+    Mov               r5, r0
+    TryGetById        r6, r1, 1, "console"
+    GetByIdShort      r7, r6, 2, "log"
+    Mov               r11, r6
+    Mov               r10, r2
+    Call              r8, r7, 2
+    Mov               r5, r8
+    Mov               r0, r5
+    Ret               r0
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/break/break_03.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 21: line 3 col 7
+    bc 27: line 3 col 18
+    bc 38: line 3 col 18
+  0x000d  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

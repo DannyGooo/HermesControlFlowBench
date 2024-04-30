@@ -1,0 +1,38 @@
+public class HermesByteCode
+{
+
+    public static JavaScript.Function.HermesByteCode.global.JavaScript.FunctionOutput global(JavaScript.Object)
+    {
+        Hbc.GlobalObject.y r0, r2, r3;
+        Hbc.GlobalObject.x r4;
+        JavaScript.Parameter_0 arg0;
+        Hbc.GlobalObject r1;
+
+        arg0 := @parameter0: JavaScript.Parameter_0;
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this CreateEnvironment()>();
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Undefined LoadConstUndefined()>();
+
+        r1 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject GetGlobalObject()>();
+
+        r2 = r0;
+
+        r3 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.y hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r1, 1, "y");
+
+        staticinvoke <Hbc.Opcode: void PutById(JavaScript.Object,JavaScript.Object,JavaScript.Number,JavaScript.String)>(r1, r3, 1, "x");
+
+        r2 = r3;
+
+        r4 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.x hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r1, 2, "x");
+
+        if r4 == 1 goto label1;
+
+        goto label1;
+
+     label1:
+        r0 = r2;
+
+        return r0;
+    }
+}

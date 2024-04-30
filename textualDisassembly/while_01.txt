@@ -1,0 +1,68 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 1
+  String Kind Entry count: 1
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..5]: global
+
+Function<global>(1 params, 11 registers, 2 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    LoadConstZero     r2
+    LoadConstUInt8    r3, 1
+    LoadConstUInt8    r4, 3
+    StoreNPToEnvironment r0, 0, r1
+    StoreNPToEnvironment r0, 1, r1
+    Mov               r5, r1
+    StoreNPToEnvironment r0, 0, r2
+    StoreNPToEnvironment r0, 1, r2
+    LoadFromEnvironment r1, r0, 0
+    Less              r2, r1, r4
+    JmpFalse          L1, r2
+L2:
+    LoadFromEnvironment r1, r0, 0
+    ToNumber          r2, r1
+    AddN              r6, r2, r3
+    StoreToEnvironment r0, 0, r6
+    Mov               r5, r2
+    LoadFromEnvironment r7, r0, 1
+    LoadFromEnvironment r8, r0, 0
+    Add               r9, r7, r8
+    StoreToEnvironment r0, 1, r9
+    Mov               r5, r9
+    LoadFromEnvironment r1, r0, 0
+    Less              r2, r1, r4
+    JmpTrue           L2, r2
+L1:
+    Mov               r1, r5
+    Ret               r1
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/while/while_01.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 35: line 4 col 8
+    bc 46: line 5 col 4
+    bc 68: line 6 col 5
+    bc 83: line 4 col 8
+  0x0010  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

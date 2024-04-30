@@ -1,0 +1,55 @@
+public class HermesByteCode
+{
+
+    public static JavaScript.Function.HermesByteCode.global.JavaScript.FunctionOutput global(JavaScript.Object)
+    {
+        JavaScript.FunctionOutput r4, r5, r8;
+        JavaScript.Exception Catch;
+        JavaScript.Parameter_0 arg0;
+        JavaScript.Environment_this r0;
+        Hbc.GlobalObject.logMyErrors r6;
+        JavaScript.Object r11, r10;
+        JavaScript.String r3;
+        JavaScript.Environment.index_0 r7;
+        JavaScript.Undefined r1;
+        Hbc.GlobalObject r2;
+
+        arg0 := @parameter0: JavaScript.Parameter_0;
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this CreateEnvironment()>();
+
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.Undefined LoadConstUndefined()>();
+
+        r2 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject GetGlobalObject()>();
+
+        r3 = staticinvoke <Hbc.Opcode: JavaScript.String LoadConstString(JavaScript.String)>("myException");
+
+        r4 = r1;
+
+     label1:
+        throw r3;
+
+     label2:
+        Catch := @caughtexception;
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 0, r5);
+
+        r6 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.logMyErrors hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 1, "logMyErrors");
+
+        r7 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_0 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 0);
+
+        r11 = r1;
+
+        r10 = r7;
+
+        r8 = staticinvoke <Hbc.GlobalObject: Hbc.GlobalObject.logMyErrors.JavaScript.FunctionOutput logMyErrors(JavaScript.Object,JavaScript.Object)>(r11, r10);
+
+        r4 = r8;
+
+        r5 = r4;
+
+        return r5;
+
+        catch JavaScript.Exception from label1 to label2 with label2;
+    }
+}

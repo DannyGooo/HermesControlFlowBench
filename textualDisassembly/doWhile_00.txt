@@ -1,0 +1,77 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 4
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..-1]: 
+s1[ASCII, 0..5]: global
+i2[ASCII, 6..12] #629A2BFD: console
+i3[ASCII, 13..15] #1C35E808: log
+
+Function<global>(1 params, 19 registers, 2 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    LoadConstString   r2, ""
+    LoadConstZero     r3
+    LoadConstUInt8    r4, 1
+    GetGlobalObject   r5
+    LoadConstUInt8    r6, 5
+    StoreNPToEnvironment r0, 0, r1
+    StoreNPToEnvironment r0, 1, r1
+    Mov               r7, r1
+    StoreToEnvironment r0, 0, r2
+    StoreNPToEnvironment r0, 1, r3
+L1:
+    LoadFromEnvironment r1, r0, 1
+    Add               r2, r1, r4
+    StoreToEnvironment r0, 1, r2
+    Mov               r7, r2
+    LoadFromEnvironment r3, r0, 0
+    LoadFromEnvironment r8, r0, 1
+    Add               r9, r3, r8
+    StoreToEnvironment r0, 0, r9
+    Mov               r7, r9
+    LoadFromEnvironment r1, r0, 1
+    Less              r2, r1, r6
+    JmpTrue           L1, r2
+    TryGetById        r1, r5, 1, "console"
+    GetByIdShort      r2, r1, 2, "log"
+    LoadFromEnvironment r3, r0, 0
+    Mov               r12, r1
+    Mov               r11, r3
+    Call              r8, r2, 2
+    Mov               r7, r8
+    Mov               r9, r7
+    Ret               r9
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/doWhile/doWhile_00.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 41: line 5 col 7
+    bc 60: line 6 col 12
+    bc 75: line 7 col 10
+    bc 82: line 9 col 1
+    bc 88: line 9 col 12
+    bc 103: line 9 col 12
+  0x0016  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

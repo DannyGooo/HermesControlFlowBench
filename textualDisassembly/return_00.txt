@@ -1,0 +1,109 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 2
+  String count: 4
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..5]: global
+i1[ASCII, 6..12] #629A2BFD: console
+i2[ASCII, 13..23] #486EAD33: getRectArea
+i3[ASCII, 24..26] #1C35E808: log
+
+Function<global>(1 params, 29 registers, 0 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    DeclareGlobalVar  "getRectArea"
+    CreateEnvironment r0
+    GetGlobalObject   r1
+    LoadConstUndefined r2
+    LoadConstUInt8    r3, 3
+    LoadConstUInt8    r4, 4
+    CreateClosure     r5, r0, 1
+    PutById           r1, r5, 1, "getRectArea"
+    Mov               r6, r2
+    TryGetById        r7, r1, 1, "console"
+    GetByIdShort      r8, r7, 2, "log"
+    GetByIdShort      r9, r1, 3, "getRectArea"
+    Mov               r22, r2
+    Mov               r21, r3
+    Mov               r20, r4
+    Call              r10, r9, 3
+    Mov               r22, r7
+    Mov               r21, r10
+    Call              r11, r8, 2
+    Mov               r6, r11
+    TryGetById        r12, r1, 1, "console"
+    GetByIdShort      r13, r12, 2, "log"
+    GetByIdShort      r14, r1, 3, "getRectArea"
+    Negate            r15, r3
+    Mov               r22, r2
+    Mov               r21, r15
+    Mov               r20, r4
+    Call              r16, r14, 3
+    Mov               r22, r12
+    Mov               r21, r16
+    Call              r17, r13, 2
+    Mov               r6, r17
+    Mov               r18, r6
+    Ret               r18
+
+Function<getRectArea>(3 params, 8 registers, 2 symbols):
+Offset in debug table: source 0x0025, lexical 0x0000
+    CreateEnvironment r0
+    LoadParam         r1, 1
+    LoadParam         r2, 2
+    LoadConstZero     r3
+    LoadConstUndefined r4
+    StoreToEnvironment r0, 0, r1
+    StoreToEnvironment r0, 1, r2
+    LoadFromEnvironment r5, r0, 0
+    Greater           r6, r5, r3
+    JmpFalse          L1, r6
+    LoadFromEnvironment r1, r0, 1
+    Greater           r2, r1, r3
+    JmpTrue           L2, r2
+L1:
+    Ret               r3
+L2:
+    LoadFromEnvironment r1, r0, 0
+    LoadFromEnvironment r2, r0, 1
+    Mul               r5, r1, r2
+    Ret               r5
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/return/return_00.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 22: line 1 col 1
+    bc 31: line 8 col 3
+    bc 37: line 8 col 14
+    bc 42: line 8 col 15
+    bc 56: line 8 col 26
+    bc 66: line 8 col 14
+    bc 73: line 11 col 3
+    bc 79: line 11 col 14
+    bc 84: line 11 col 15
+    bc 101: line 11 col 26
+    bc 111: line 11 col 14
+  0x0025  function idx 1, starts at line 1 col 1
+    bc 24: line 2 col 9
+    bc 35: line 2 col 22
+    bc 52: line 3 col 14
+  0x0032  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

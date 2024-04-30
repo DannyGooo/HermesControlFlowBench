@@ -1,0 +1,80 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 3
+  String count: 3
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..3]: calc
+s1[ASCII, 4..9]: global
+i2[ASCII, 10..14] #E1BA7C43: magic
+
+Function<global>(1 params, 20 registers, 1 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    DeclareGlobalVar  "magic"
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    GetGlobalObject   r2
+    LoadConstInt      r3, 1337
+    StoreNPToEnvironment r0, 0, r1
+    CreateClosure     r4, r0, 1
+    PutById           r2, r4, 1, "magic"
+    Mov               r5, r1
+    GetByIdShort      r6, r2, 1, "magic"
+    Mov               r13, r1
+    Call              r7, r6, 1
+    StoreToEnvironment r0, 0, r7
+    LoadFromEnvironment r8, r0, 0
+    Mov               r13, r1
+    Mov               r12, r3
+    Call              r9, r8, 2
+    Mov               r5, r9
+    Mov               r10, r5
+    Ret               r10
+
+Function<magic>(1 params, 4 registers, 1 symbols):
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    CreateClosure     r2, r0, 2
+    StoreToEnvironment r0, 0, r2
+    Ret               r2
+
+Function<calc>(2 params, 7 registers, 1 symbols):
+Offset in debug table: source 0x0010, lexical 0x0000
+    CreateEnvironment r0
+    LoadParam         r1, 1
+    LoadConstUInt8    r2, 42
+    LoadConstUndefined r3
+    StoreToEnvironment r0, 0, r1
+    LoadFromEnvironment r4, r0, 0
+    Mul               r5, r4, r2
+    Ret               r5
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/return/return_02.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 26: line 1 col 1
+    bc 35: line 7 col 18
+    bc 43: line 7 col 23
+    bc 61: line 8 col 9
+  0x0010  function idx 2, starts at line 2 col 12
+    bc 18: line 3 col 14
+  0x0017  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

@@ -1,0 +1,98 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 10
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..2]:  = 
+s1[ASCII, 3..8]: global
+s2[ASCII, 9..12]: obj.
+i3[ASCII, 13..26] #85BBF6F9: HermesInternal
+i4[ASCII, 27..27] #00018270: a
+i5[ASCII, 28..28] #00018E43: b
+i6[ASCII, 29..29] #00018A52: c
+i7[ASCII, 30..35] #CB8DFA65: concat
+i8[ASCII, 36..42] #629A2BFD: console
+i9[ASCII, 43..45] #1C35E808: log
+
+Object Key Buffer:
+[String 4]
+[String 5]
+[String 6]
+Object Value Buffer:
+[int 1]
+[int 2]
+[int 3]
+Function<global>(1 params, 32 registers, 2 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    GetGlobalObject   r2
+    LoadConstString   r3, "obj."
+    LoadConstString   r4, " = "
+    StoreNPToEnvironment r0, 0, r1
+    StoreNPToEnvironment r0, 1, r1
+    Mov               r5, r1
+    NewObjectWithBuffer r6, 3, 3, 0, 0
+    StoreToEnvironment r0, 0, r6
+    LoadFromEnvironment r11, r0, 0
+    Mov               r8, r11
+    GetPNameList      r7, r8, r9, r10
+    JmpUndefined      L1, r7
+L2:
+    GetNextPName      r12, r7, r8, r9, r10
+    JmpUndefined      L1, r12
+    Mov               r1, r12
+    StoreToEnvironment r0, 1, r1
+    TryGetById        r6, r2, 1, "console"
+    GetByIdShort      r11, r6, 2, "log"
+    LoadFromEnvironment r13, r0, 1
+    LoadFromEnvironment r14, r0, 0
+    LoadFromEnvironment r15, r0, 1
+    GetByVal          r16, r14, r15
+    TryGetById        r17, r2, 3, "HermesInternal"
+    GetByIdShort      r18, r17, 4, "concat"
+    Mov               r25, r3
+    Mov               r24, r13
+    Mov               r23, r4
+    Mov               r22, r16
+    Call              r19, r18, 4
+    Mov               r25, r6
+    Mov               r24, r19
+    Call              r20, r11, 2
+    Mov               r5, r20
+    Jmp               L2
+L1:
+    Mov               r1, r5
+    Ret               r1
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/forIn/forIn_01.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 70: line 4 col 3
+    bc 76: line 4 col 14
+    bc 93: line 4 col 35
+    bc 97: line 4 col 15
+    bc 103: line 4 col 15
+    bc 120: line 4 col 15
+    bc 130: line 4 col 14
+  0x001a  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

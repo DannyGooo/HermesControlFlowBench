@@ -1,0 +1,107 @@
+public class HermesByteCode
+{
+
+    public static JavaScript.Function.HermesByteCode.global.JavaScript.FunctionOutput global(JavaScript.Object)
+    {
+        JavaScript.Function.HermesByteCode.testBreak r3;
+        JavaScript.Undefined r2, r4, r5;
+        JavaScript.Parameter_0 arg0;
+        JavaScript.Environment_this r0;
+        Hbc.GlobalObject r1;
+
+        arg0 := @parameter0: JavaScript.Parameter_0;
+
+        staticinvoke <Hbc.Opcode: void declareGlobalVar(JavaScript.Object)>("testBreak");
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this CreateEnvironment()>();
+
+        r1 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject GetGlobalObject()>();
+
+        r2 = staticinvoke <Hbc.Opcode: JavaScript.Undefined LoadConstUndefined()>();
+
+        r3 = staticinvoke <Hbc.Opcode: JavaScript.Function.HermesByteCode.testBreak CreateClosure(JavaScript.Environment,int)>(r0, 1);
+
+        staticinvoke <Hbc.Opcode: void PutById(JavaScript.Object,JavaScript.Object,JavaScript.Number,JavaScript.String)>(r1, r3, 1, "testBreak");
+
+        r4 = r2;
+
+        r5 = r4;
+
+        return r5;
+    }
+
+    public static JavaScript.Function.HermesByteCode.testBreak.JavaScript.FunctionOutput testBreak(JavaScript.Object, JavaScript.Object)
+    {
+        JavaScript.Number_6 r5;
+        JavaScript.Parameter_1 arg1;
+        JavaScript.Parameter_0 arg0;
+        JavaScript.Environment_this r0;
+        JavaScript.Object 3, 6, 1;
+        JavaScript.Number r7;
+        JavaScript.Environment.index_0 r1;
+        JavaScript.Undefined r2;
+        JavaScript.Environment.index_1 r3;
+        JavaScript.Number_1 r6;
+        JavaScript.Number_3 r4;
+
+        arg0 := @parameter0: JavaScript.Parameter_0;
+
+        arg1 := @parameter1: JavaScript.Parameter_1;
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this CreateEnvironment()>();
+
+        r1 = arg1;
+
+        r2 = staticinvoke <Hbc.Opcode: JavaScript.Undefined LoadConstUndefined()>();
+
+        r3 = staticinvoke <Hbc.Opcode: JavaScript.Number_0 LoadConstZero()>();
+
+        r4 = staticinvoke <Hbc.Opcode: JavaScript.Number_3 LoadConstUInt8(JavaScript.Number)>(3);
+
+        r5 = staticinvoke <Hbc.Opcode: JavaScript.Number_6 LoadConstUInt8(JavaScript.Number)>(6);
+
+        r6 = staticinvoke <Hbc.Opcode: JavaScript.Number_1 LoadConstUInt8(JavaScript.Number)>(1);
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreNPToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 0, r2);
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 1, r1);
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreNPToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 0, r3);
+
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this.index_0 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 0);
+
+        r3 = staticinvoke <Hbc.Opcode: JavaScript.Boolean Less(JavaScript.Object,JavaScript.Object)>(r1, r5);
+
+        if r3 == 0 goto label2;
+
+     label1:
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_0 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 0);
+
+        r3 = staticinvoke <Hbc.Opcode: JavaScript.Boolean StrictEq(JavaScript.Object,JavaScript.Object)>(r1, r4);
+
+        if r3 == 1 goto label2;
+
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_0 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 0);
+
+        r3 = staticinvoke <Hbc.Opcode: JavaScript.Number Add(JavaScript.Object,JavaScript.Object)>(r1, r6);
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 0, r3);
+
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_0 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 0);
+
+        r3 = staticinvoke <Hbc.Opcode: JavaScript.Boolean Less(JavaScript.Object,JavaScript.Object)>(r1, r5);
+
+        if r3 == 1 goto label1;
+
+        goto label2;
+
+     label2:
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_0 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 0);
+
+        r3 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_1 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 1);
+
+        r7 = staticinvoke <Hbc.Opcode: JavaScript.Number Mul(JavaScript.Object,JavaScript.Object)>(r1, r3);
+
+        return r7;
+    }
+}

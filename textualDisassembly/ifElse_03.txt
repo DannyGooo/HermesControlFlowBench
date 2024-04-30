@@ -1,0 +1,52 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 3
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..5]: global
+i1[ASCII, 6..6] #0001E7F9: x
+i2[ASCII, 7..7] #0001E3E8: y
+
+Function<global>(1 params, 6 registers, 0 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r0
+    GetGlobalObject   r1
+    Mov               r2, r0
+    TryGetById        r3, r1, 1, "y"
+    PutById           r1, r3, 1, "x"
+    Mov               r2, r3
+    TryGetById        r4, r1, 2, "x"
+    JmpTrue           L1, r4
+    Jmp               L1
+L1:
+    Mov               r0, r2
+    Ret               r0
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/ifElse/ifElse_03.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 9: line 1 col 5
+    bc 15: line 1 col 3
+    bc 24: line 2 col 5
+  0x000d  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

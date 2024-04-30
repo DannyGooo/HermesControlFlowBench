@@ -1,0 +1,50 @@
+public class HermesByteCode
+{
+
+    public static JavaScript.Function.HermesByteCode.global.JavaScript.FunctionOutput global(JavaScript.Object)
+    {
+        JavaScript.Number_5 r3;
+        Hbc.GlobalObject.x r5;
+        JavaScript.Parameter_0 arg0;
+        JavaScript.Object 50, 5;
+        JavaScript.Boolean r2, r6;
+        JavaScript.Undefined r0, r4;
+        Hbc.GlobalObject r1;
+
+        arg0 := @parameter0: JavaScript.Parameter_0;
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this CreateEnvironment()>();
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Undefined LoadConstUndefined()>();
+
+        r1 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject GetGlobalObject()>();
+
+        r2 = staticinvoke <Hbc.Opcode: JavaScript.Number_50 LoadConstUInt8(JavaScript.Number)>(50);
+
+        r3 = staticinvoke <Hbc.Opcode: JavaScript.Number_5 LoadConstUInt8(JavaScript.Number)>(5);
+
+        r4 = r0;
+
+        r5 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.x hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r1, 1, "x");
+
+        r6 = staticinvoke <Hbc.Opcode: JavaScript.Boolean Greater(JavaScript.Object,JavaScript.Object)>(r5, r2);
+
+        if r6 == 1 goto label2;
+
+        r0 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.x hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r1, 1, "x");
+
+        r2 = staticinvoke <Hbc.Opcode: JavaScript.Boolean Greater(JavaScript.Object,JavaScript.Object)>(r0, r3);
+
+        if r2 == 1 goto label1;
+
+        goto label1;
+
+     label1:
+        goto label2;
+
+     label2:
+        r0 = r4;
+
+        return r0;
+    }
+}

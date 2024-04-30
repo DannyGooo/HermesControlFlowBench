@@ -1,0 +1,152 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 11
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..2]:  = 
+s1[ASCII, 3..8]: global
+s2[ASCII, 9..12]: obj.
+s3[ASCII, 13..17]: obj2.
+i4[ASCII, 18..31] #85BBF6F9: HermesInternal
+i5[ASCII, 32..32] #00018270: a
+i6[ASCII, 33..33] #00018E43: b
+i7[ASCII, 34..34] #00018A52: c
+i8[ASCII, 35..40] #CB8DFA65: concat
+i9[ASCII, 41..47] #629A2BFD: console
+i10[ASCII, 48..50] #1C35E808: log
+
+Object Key Buffer:
+[String 5]
+[String 6]
+[String 7]
+[String 5]
+[String 6]
+[String 7]
+Object Value Buffer:
+[int 1]
+[int 2]
+[int 3]
+[int 1]
+[int 2]
+[int 3]
+Function<global>(1 params, 40 registers, 3 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    GetGlobalObject   r2
+    LoadConstString   r3, "obj."
+    LoadConstString   r4, " = "
+    LoadConstString   r5, "obj2."
+    StoreNPToEnvironment r0, 0, r1
+    StoreNPToEnvironment r0, 1, r1
+    StoreNPToEnvironment r0, 2, r1
+    Mov               r6, r1
+    NewObjectWithBuffer r7, 3, 3, 0, 0
+    StoreToEnvironment r0, 0, r7
+    LoadFromEnvironment r12, r0, 0
+    Mov               r9, r12
+    GetPNameList      r8, r9, r10, r11
+    JmpUndefined      L1, r8
+L2:
+    GetNextPName      r13, r8, r9, r10, r11
+    JmpUndefined      L1, r13
+    Mov               r1, r13
+    StoreToEnvironment r0, 1, r1
+    TryGetById        r7, r2, 1, "console"
+    GetByIdShort      r12, r7, 2, "log"
+    LoadFromEnvironment r14, r0, 1
+    LoadFromEnvironment r15, r0, 0
+    LoadFromEnvironment r16, r0, 1
+    GetByVal          r17, r15, r16
+    TryGetById        r18, r2, 3, "HermesInternal"
+    GetByIdShort      r19, r18, 4, "concat"
+    Mov               r33, r3
+    Mov               r32, r14
+    Mov               r31, r4
+    Mov               r30, r17
+    Call              r20, r19, 4
+    Mov               r33, r7
+    Mov               r32, r20
+    Call              r21, r12, 2
+    Mov               r6, r21
+    LoadFromEnvironment r22, r0, 0
+    DelById           r23, r22, "c"
+    Mov               r6, r23
+    Jmp               L2
+L1:
+    NewObjectWithBuffer r1, 3, 3, 4, 13
+    StoreToEnvironment r0, 2, r1
+    LoadFromEnvironment r16, r0, 2
+    Mov               r12, r16
+    GetPNameList      r7, r12, r14, r15
+    JmpUndefined      L3, r7
+L4:
+    GetNextPName      r17, r7, r12, r14, r15
+    JmpUndefined      L3, r17
+    Mov               r1, r17
+    StoreToEnvironment r0, 1, r1
+    TryGetById        r16, r2, 1, "console"
+    GetByIdShort      r18, r16, 2, "log"
+    LoadFromEnvironment r19, r0, 1
+    LoadFromEnvironment r20, r0, 2
+    LoadFromEnvironment r21, r0, 1
+    GetByVal          r22, r20, r21
+    TryGetById        r23, r2, 3, "HermesInternal"
+    GetByIdShort      r24, r23, 4, "concat"
+    Mov               r33, r5
+    Mov               r32, r19
+    Mov               r31, r4
+    Mov               r30, r22
+    Call              r25, r24, 4
+    Mov               r33, r16
+    Mov               r32, r25
+    Call              r26, r18, 2
+    Mov               r6, r26
+    LoadFromEnvironment r27, r0, 2
+    DelById           r28, r27, "a"
+    Mov               r6, r28
+    Jmp               L4
+L3:
+    Mov               r1, r6
+    Ret               r1
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/forIn/forIn_06.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 78: line 5 col 3
+    bc 84: line 5 col 14
+    bc 101: line 5 col 35
+    bc 105: line 5 col 15
+    bc 111: line 5 col 15
+    bc 128: line 5 col 15
+    bc 138: line 5 col 14
+    bc 149: line 6 col 3
+    bc 204: line 13 col 3
+    bc 210: line 13 col 14
+    bc 227: line 13 col 37
+    bc 231: line 13 col 15
+    bc 237: line 13 col 15
+    bc 254: line 13 col 15
+    bc 264: line 13 col 14
+    bc 275: line 14 col 3
+  0x0035  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

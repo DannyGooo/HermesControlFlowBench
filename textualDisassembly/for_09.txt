@@ -1,0 +1,102 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 2
+  String count: 6
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..-1]: 
+s1[ASCII, 0..5]: global
+i2[ASCII, 6..12] #629A2BFD: console
+i3[ASCII, 13..13] #0001A2F8: i
+i4[ASCII, 14..16] #1C35E808: log
+i5[ASCII, 17..26] #500B50F7: setTimeout
+
+Function<global>(1 params, 20 registers, 2 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    DeclareGlobalVar  "i"
+    CreateEnvironment r0
+    LoadThisNS        r1
+    LoadConstUndefined r2
+    LoadConstZero     r3
+    GetGlobalObject   r4
+    LoadConstInt      r5, 1000
+    LoadConstUInt8    r6, 3
+    LoadConstUInt8    r7, 1
+    StoreToEnvironment r0, 0, r1
+    GetNewTarget      r8
+    StoreToEnvironment r0, 1, r8
+    Mov               r9, r2
+    PutById           r4, r3, 1, "i"
+    GetByIdShort      r1, r4, 1, "i"
+    Less              r3, r1, r6
+    JmpFalse          L1, r3
+L2:
+    TryGetById        r1, r4, 2, "setTimeout"
+    CreateClosure     r3, r0, 1
+    Mov               r13, r2
+    Mov               r12, r3
+    Mov               r11, r5
+    Call              r8, r1, 3
+    Mov               r9, r8
+    GetByIdShort      r1, r4, 1, "i"
+    ToNumber          r3, r1
+    AddN              r8, r3, r7
+    PutById           r4, r8, 1, "i"
+    GetByIdShort      r1, r4, 1, "i"
+    Less              r3, r1, r6
+    JmpTrue           L2, r3
+L1:
+    Mov               r1, r9
+    Ret               r1
+
+NCFunction<>(1 params, 14 registers, 0 symbols):
+Offset in debug table: source 0x0022, lexical 0x0000
+    CreateEnvironment r0
+    GetGlobalObject   r0
+    LoadConstUndefined r1
+    TryGetById        r2, r0, 1, "console"
+    GetByIdShort      r3, r2, 2, "log"
+    GetByIdShort      r4, r0, 3, "i"
+    Mov               r7, r2
+    Mov               r6, r4
+    Call              r5, r3, 2
+    Ret               r1
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/for/for_09.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 40: line 1 col 12
+    bc 46: line 1 col 17
+    bc 51: line 1 col 17
+    bc 58: line 2 col 5
+    bc 78: line 2 col 15
+    bc 85: line 1 col 24
+    bc 90: line 1 col 25
+    bc 97: line 1 col 25
+    bc 103: line 1 col 17
+    bc 108: line 1 col 17
+  0x0022  function idx 1, starts at line 2 col 16
+    bc 6: line 3 col 7
+    bc 12: line 3 col 18
+    bc 17: line 3 col 19
+    bc 28: line 3 col 18
+  0x0032  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

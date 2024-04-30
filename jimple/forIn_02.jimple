@@ -1,0 +1,176 @@
+public class HermesByteCode
+{
+
+    public static JavaScript.Function.HermesByteCode.global.JavaScript.FunctionOutput global(JavaScript.Object)
+    {
+        JavaScript.FunctionOutput r1, r6, r13, r14;
+        Hbc.GlobalObject.HermesInternal r11;
+        JavaScript.Environment_this.index_1 r19, r16;
+        JavaScript.Environment_this r0;
+        Hbc.GlobalObject.HermesInternal.concat r12;
+        JavaScript.String r3, r4;
+        JavaScript.GetPNameList r15;
+        JavaScript.Object.GetByVal.JavaScript.Property r10;
+        JavaScript.GetNextPName r20;
+        Hbc.GlobalObject r2;
+        JavaScript.Parameter_0 arg0;
+        JavaScript.Object r25, r17, r18, r24, r23, r22;
+        Hbc.GlobalObject.console.log r5;
+        JavaScript.Environment.index_1 r8;
+        JavaScript.Environment.index_2 r7, r9;
+
+        arg0 := @parameter0: JavaScript.Parameter_0;
+
+        staticinvoke <Hbc.Opcode: void declareGlobalVar(JavaScript.Object)>("ColoredTriangle");
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this CreateEnvironment()>();
+
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.Undefined LoadConstUndefined()>();
+
+        r2 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject GetGlobalObject()>();
+
+        r3 = staticinvoke <Hbc.Opcode: JavaScript.String LoadConstString(JavaScript.String)>("obj.");
+
+        r4 = staticinvoke <Hbc.Opcode: JavaScript.String LoadConstString(JavaScript.String)>(" = ");
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreNPToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 0, r1);
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreNPToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 1, r1);
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreNPToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 2, r1);
+
+        r5 = staticinvoke <Hbc.Opcode: JavaScript.Function.HermesByteCode.ColoredTriangle CreateClosure(JavaScript.Environment,int)>(r0, 1);
+
+        staticinvoke <Hbc.Opcode: void PutById(JavaScript.Object,JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, r5, 1, "ColoredTriangle");
+
+        r6 = r1;
+
+        r7 = staticinvoke <Hbc.Opcode: JavaScript.Object NewObjectWithBuffer(JavaScript.Number,JavaScript.Number,JavaScript.Number,JavaScript.Number)>(3, 3, 0, 0);
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 0, r7);
+
+        r8 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.ColoredTriangle hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 1, "ColoredTriangle");
+
+        r9 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this.index_0 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 0);
+
+        staticinvoke <Hbc.Opcode: void PutById(JavaScript.Object,JavaScript.Object,JavaScript.Number,JavaScript.String)>(r8, r9, 2, "prototype");
+
+        r6 = r9;
+
+        r10 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.ColoredTriangle hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 1, "ColoredTriangle");
+
+        r11 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.ColoredTriangle.prototype hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r10, 2, "prototype");
+
+        r12 = staticinvoke <Hbc.Opcode: JavaScript.CreateThis CreateThis(JavaScript.Object,JavaScript.Object)>(r11, r10);
+
+        r25 = r12;
+
+        r13 = staticinvoke <Hbc.GlobalObject: Hbc.GlobalObject.ColoredTriangle.JavaScript.FunctionOutput ColoredTriangle(JavaScript.Object)>(r25);
+
+        r14 = staticinvoke <Hbc.Opcode: JavaScript.SelectObject SelectObject(JavaScript.Object,JavaScript.Object)>(r12, r13);
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 1, r14);
+
+        r19 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this.index_1 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 1);
+
+        r16 = r19;
+
+        r15 = staticinvoke <Hbc.Opcode: JavaScript.GetPNameList GetPNameList(JavaScript.Object,JavaScript.Object,JavaScript.Object)>(r16, r17, r18);
+
+        if r15 == null goto label4;
+
+     label1:
+        r20 = staticinvoke <Hbc.Opcode: JavaScript.GetNextPName GetNextPName(JavaScript.Object,JavaScript.Object,JavaScript.Object,JavaScript.Object)>(r15, r16, r17, r18);
+
+        if r20 == null goto label4;
+
+        r1 = r20;
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 2, r1);
+
+        r5 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.Object hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 3, "Object");
+
+        r7 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.Object.hasOwn hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r5, 4, "hasOwn");
+
+        r8 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_1 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 1);
+
+        r9 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_2 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 2);
+
+        r25 = r5;
+
+        r24 = r8;
+
+        r23 = r9;
+
+        r10 = staticinvoke <Hbc.GlobalObject.Object: Hbc.GlobalObject.Object.hasOwn.JavaScript.FunctionOutput hasOwn(JavaScript.Object,JavaScript.Object,JavaScript.Object)>(r25, r24, r23);
+
+        if r10 == 1 goto label2;
+
+        goto label3;
+
+     label2:
+        r1 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.console hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 5, "console");
+
+        r5 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.console.log hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r1, 6, "log");
+
+        r7 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_2 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 2);
+
+        r8 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_1 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 1);
+
+        r9 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_2 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 2);
+
+        r10 = staticinvoke <Hbc.Opcode: JavaScript.Object.GetByVal.JavaScript.Property GetByVal(JavaScript.Object,JavaScript.Object)>(r8, r9);
+
+        r11 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.HermesInternal hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 7, "HermesInternal");
+
+        r12 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.HermesInternal.concat hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r11, 8, "concat");
+
+        r25 = r3;
+
+        r24 = r7;
+
+        r23 = r4;
+
+        r22 = r10;
+
+        r13 = staticinvoke <Hbc.GlobalObject.HermesInternal: Hbc.GlobalObject.HermesInternal.concat.JavaScript.FunctionOutput concat(JavaScript.Object,JavaScript.Object,JavaScript.Object,JavaScript.Object)>(r25, r24, r23, r22);
+
+        r25 = r1;
+
+        r24 = r13;
+
+        r14 = staticinvoke <Hbc.GlobalObject.console: Hbc.GlobalObject.console.log.JavaScript.FunctionOutput log(JavaScript.Object,JavaScript.Object)>(r25, r24);
+
+        r6 = r14;
+
+     label3:
+        goto label1;
+
+     label4:
+        r1 = r6;
+
+        return r1;
+    }
+
+    public static JavaScript.Function.HermesByteCode.ColoredTriangle.JavaScript.FunctionOutput ColoredTriangle(JavaScript.Object)
+    {
+        JavaScript.String r1;
+        JavaScript.This r0;
+        JavaScript.Undefined r2;
+        JavaScript.Parameter_0 arg0;
+
+        arg0 := @parameter0: JavaScript.Parameter_0;
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this CreateEnvironment()>();
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.This LoadThisNS()>();
+
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.String LoadConstString(JavaScript.String)>("red");
+
+        r2 = staticinvoke <Hbc.Opcode: JavaScript.Undefined LoadConstUndefined()>();
+
+        staticinvoke <Hbc.Opcode: void PutById(JavaScript.Object,JavaScript.Object,JavaScript.Number,JavaScript.String)>(r0, r1, 1, "color");
+
+        return r2;
+    }
+}

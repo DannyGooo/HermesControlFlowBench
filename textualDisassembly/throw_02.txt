@@ -1,0 +1,86 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 2
+  String count: 6
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..-1]: 
+s1[ASCII, 0..6]: foo.txt
+s2[ASCII, 7..12]: global
+i3[ASCII, 13..19] #629A2BFD: console
+i4[ASCII, 20..22] #1C35E808: log
+i5[ASCII, 23..30] #5FAD29E0: readFile
+
+Function<global>(1 params, 21 registers, 2 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadThisNS        r1
+    LoadConstUndefined r2
+    GetGlobalObject   r3
+    LoadConstString   r4, "foo.txt"
+    StoreToEnvironment r0, 0, r1
+    GetNewTarget      r5
+    StoreToEnvironment r0, 1, r5
+    Mov               r6, r2
+    TryGetById        r7, r3, 1, "readFile"
+    CreateClosure     r8, r0, 1
+    Mov               r14, r2
+    Mov               r13, r4
+    Mov               r12, r8
+    Call              r9, r7, 3
+    Mov               r6, r9
+    Mov               r10, r6
+    Ret               r10
+
+NCFunction<>(3 params, 15 registers, 2 symbols):
+Offset in debug table: source 0x000a, lexical 0x0000
+    CreateEnvironment r0
+    LoadParam         r1, 1
+    LoadParam         r2, 2
+    GetGlobalObject   r3
+    LoadConstUndefined r4
+    StoreToEnvironment r0, 0, r1
+    StoreToEnvironment r0, 1, r2
+    LoadFromEnvironment r5, r0, 0
+    JmpTrue           L1, r5
+    TryGetById        r1, r3, 1, "console"
+    GetByIdShort      r2, r1, 2, "log"
+    LoadFromEnvironment r5, r0, 1
+    Mov               r8, r1
+    Mov               r7, r5
+    Call              r6, r2, 2
+    Ret               r4
+L1:
+    LoadFromEnvironment r1, r0, 0
+    Throw             r1
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/throw/throw_02.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 25: line 1 col 1
+    bc 45: line 1 col 9
+  0x000a  function idx 1, starts at line 1 col 21
+    bc 27: line 5 col 5
+    bc 33: line 5 col 16
+    bc 48: line 5 col 16
+    bc 58: line 3 col 7
+  0x001a  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

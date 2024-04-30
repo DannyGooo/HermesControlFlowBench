@@ -1,0 +1,152 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 2
+  String count: 16
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..2]:  = 
+s1[ASCII, 3..8]: global
+s2[ASCII, 9..12]: obj.
+s3[ASCII, 13..15]: red
+i4[ASCII, 16..30] #C817C368: ColoredTriangle
+i5[ASCII, 31..44] #85BBF6F9: HermesInternal
+i6[ASCII, 45..50] #9615E9FA: Object
+i7[ASCII, 51..51] #00018270: a
+i8[ASCII, 52..52] #00018E43: b
+i9[ASCII, 53..53] #00018A52: c
+i10[ASCII, 54..58] #04BF5A0C: color
+i11[ASCII, 59..64] #CB8DFA65: concat
+i12[ASCII, 65..71] #629A2BFD: console
+i13[ASCII, 72..77] #03C21263: hasOwn
+i14[ASCII, 78..80] #1C35E808: log
+i15[ASCII, 81..89] #807C5F3D: prototype
+
+Object Key Buffer:
+[String 7]
+[String 8]
+[String 9]
+Object Value Buffer:
+[int 1]
+[int 2]
+[int 3]
+Function<global>(1 params, 32 registers, 3 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    DeclareGlobalVar  "ColoredTriangle"
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    GetGlobalObject   r2
+    LoadConstString   r3, "obj."
+    LoadConstString   r4, " = "
+    StoreNPToEnvironment r0, 0, r1
+    StoreNPToEnvironment r0, 1, r1
+    StoreNPToEnvironment r0, 2, r1
+    CreateClosure     r5, r0, 1
+    PutById           r2, r5, 1, "ColoredTriangle"
+    Mov               r6, r1
+    NewObjectWithBuffer r7, 3, 3, 0, 0
+    StoreToEnvironment r0, 0, r7
+    GetByIdShort      r8, r2, 1, "ColoredTriangle"
+    LoadFromEnvironment r9, r0, 0
+    PutById           r8, r9, 2, "prototype"
+    Mov               r6, r9
+    GetByIdShort      r10, r2, 1, "ColoredTriangle"
+    GetByIdShort      r11, r10, 2, "prototype"
+    CreateThis        r12, r11, r10
+    Mov               r25, r12
+    Construct         r13, r10, 1
+    SelectObject      r14, r12, r13
+    StoreToEnvironment r0, 1, r14
+    LoadFromEnvironment r19, r0, 1
+    Mov               r16, r19
+    GetPNameList      r15, r16, r17, r18
+    JmpUndefinedLong  L1, r15
+L4:
+    GetNextPName      r20, r15, r16, r17, r18
+    JmpUndefined      L1, r20
+    Mov               r1, r20
+    StoreToEnvironment r0, 2, r1
+    TryGetById        r5, r2, 3, "Object"
+    GetByIdShort      r7, r5, 4, "hasOwn"
+    LoadFromEnvironment r8, r0, 1
+    LoadFromEnvironment r9, r0, 2
+    Mov               r25, r5
+    Mov               r24, r8
+    Mov               r23, r9
+    Call              r10, r7, 3
+    JmpTrue           L2, r10
+    Jmp               L3
+L2:
+    TryGetById        r1, r2, 5, "console"
+    GetByIdShort      r5, r1, 6, "log"
+    LoadFromEnvironment r7, r0, 2
+    LoadFromEnvironment r8, r0, 1
+    LoadFromEnvironment r9, r0, 2
+    GetByVal          r10, r8, r9
+    TryGetById        r11, r2, 7, "HermesInternal"
+    GetByIdShort      r12, r11, 8, "concat"
+    Mov               r25, r3
+    Mov               r24, r7
+    Mov               r23, r4
+    Mov               r22, r10
+    Call              r13, r12, 4
+    Mov               r25, r1
+    Mov               r24, r13
+    Call              r14, r5, 2
+    Mov               r6, r14
+L3:
+    Jmp               L4
+L1:
+    Mov               r1, r6
+    Ret               r1
+
+Function<ColoredTriangle>(1 params, 4 registers, 0 symbols):
+Offset in debug table: source 0x0037, lexical 0x0000
+    CreateEnvironment r0
+    LoadThisNS        r0
+    LoadConstString   r1, "red"
+    LoadConstUndefined r2
+    PutById           r0, r1, 1, "color"
+    Ret               r2
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/forIn/forIn_02.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 36: line 1 col 1
+    bc 59: line 7 col 1
+    bc 68: line 7 col 27
+    bc 77: line 9 col 17
+    bc 82: line 9 col 32
+    bc 87: line 9 col 32
+    bc 94: line 9 col 32
+    bc 140: line 12 col 7
+    bc 146: line 12 col 20
+    bc 168: line 12 col 20
+    bc 177: line 13 col 5
+    bc 183: line 13 col 16
+    bc 200: line 13 col 37
+    bc 204: line 13 col 17
+    bc 210: line 13 col 17
+    bc 227: line 13 col 17
+    bc 237: line 13 col 16
+  0x0037  function idx 1, starts at line 3 col 1
+    bc 10: line 4 col 14
+  0x003e  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

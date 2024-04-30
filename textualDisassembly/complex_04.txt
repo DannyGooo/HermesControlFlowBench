@@ -1,0 +1,100 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 5
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..5]: global
+i1[ASCII, 6..15] #86528635: RangeError
+i2[ASCII, 16..22] #629A2BFD: console
+i3[ASCII, 23..25] #1C35E808: log
+i4[ASCII, 26..34] #C768B59E: myRoutine
+
+Function<global>(1 params, 20 registers, 2 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    GetGlobalObject   r2
+    LoadConstZero     r3
+    LoadConstUInt8    r4, 9
+    LoadConstUInt8    r5, 1
+    StoreNPToEnvironment r0, 0, r1
+    Mov               r6, r1
+L6:
+    TryGetById        r7, r2, 1, "myRoutine"
+    Mov               r13, r1
+    Call              r8, r7, 1
+    Mov               r6, r8
+    StoreNPToEnvironment r0, 0, r3
+    LoadFromEnvironment r7, r0, 0
+    Less              r8, r7, r4
+    JmpFalse          L1, r8
+L2:
+    TryGetById        r7, r2, 2, "console"
+    GetByIdShort      r8, r7, 3, "log"
+    LoadFromEnvironment r9, r0, 0
+    Mov               r13, r7
+    Mov               r12, r9
+    Call              r10, r8, 2
+    Mov               r6, r10
+    LoadFromEnvironment r7, r0, 0
+    ToNumber          r8, r7
+    AddN              r9, r8, r5
+    StoreToEnvironment r0, 0, r9
+    LoadFromEnvironment r7, r0, 0
+    Less              r8, r7, r4
+    JmpTrue           L2, r8
+L1:
+    Jmp               L4
+L3:
+    Catch             r7
+    StoreToEnvironment r0, 1, r7
+    LoadFromEnvironment r8, r0, 1
+    TryGetById        r9, r2, 4, "RangeError"
+    InstanceOf        r10, r8, r9
+    JmpTrue           L4, r10
+    LoadFromEnvironment r7, r0, 1
+    Throw             r7
+L4:
+    Mov               r7, r6
+    Ret               r7
+
+Exception Handlers:
+0: start = L6, end = L1, target = L3
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/complex/complex_04.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 21: line 2 col 5
+    bc 30: line 2 col 14
+    bc 45: line 4 col 12
+    bc 52: line 5 col 5
+    bc 58: line 5 col 16
+    bc 73: line 5 col 16
+    bc 84: line 4 col 20
+    bc 99: line 4 col 12
+    bc 106: line 9 col 3
+    bc 108: line 9 col 5
+    bc 118: line 10 col 22
+    bc 124: line 10 col 9
+    bc 135: line 13 col 7
+  0x002b  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

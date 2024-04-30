@@ -1,0 +1,111 @@
+public class HermesByteCode
+{
+
+    public static JavaScript.Function.HermesByteCode.global.JavaScript.FunctionOutput global(JavaScript.Object)
+    {
+        JavaScript.FunctionOutput r1, r3, r5, r8, r9;
+        JavaScript.Environment.index_1.textContent.trim r7;
+        JavaScript.Parameter_0 arg0;
+        JavaScript.Environment_this r0;
+        JavaScript.Object r13, r12, r11;
+        JavaScript.Environment.index_0.nextNode r4;
+        JavaScript.Environment.index_1.textContent r6;
+        Hbc.GlobalObject r2;
+
+        arg0 := @parameter0: JavaScript.Parameter_0;
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this CreateEnvironment()>();
+
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.Undefined LoadConstUndefined()>();
+
+        r2 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject GetGlobalObject()>();
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreNPToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 0, r1);
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreNPToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 1, r1);
+
+        r3 = r1;
+
+        r4 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.document hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 1, "document");
+
+        r5 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.document.createNodeIterator hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r4, 2, "createNodeIterator");
+
+        r6 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.document hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 1, "document");
+
+        r7 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.NodeFilter hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 3, "NodeFilter");
+
+        r8 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.NodeFilter.SHOW_COMMENT hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r7, 4, "SHOW_COMMENT");
+
+        r13 = r4;
+
+        r12 = r6;
+
+        r11 = r8;
+
+        r9 = staticinvoke <Hbc.GlobalObject.document: Hbc.GlobalObject.document.createNodeIterator.JavaScript.FunctionOutput createNodeIterator(JavaScript.Object,JavaScript.Object,JavaScript.Object)>(r13, r12, r11);
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 0, r9);
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreNPToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 1, r1);
+
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this.index_0 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 0);
+
+        r4 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this.index_0.nextNode hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r1, 5, "nextNode");
+
+        r13 = r1;
+
+        r5 = staticinvoke <JavaScript.Environment_this.index_0: JavaScript.Environment_this.index_0.nextNode.JavaScript.FunctionOutput nextNode(JavaScript.Object)>(r13);
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 1, r5);
+
+        if r5 == 0 goto label2;
+
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this.index_1 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 1);
+
+        if r1 == 0 goto label2;
+
+     label1:
+        r1 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.console hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 6, "console");
+
+        r4 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.console.log hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r1, 7, "log");
+
+        r5 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_1 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 1);
+
+        r6 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_1.textContent hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r5, 8, "textContent");
+
+        r7 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_1.textContent.trim hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r6, 9, "trim");
+
+        r13 = r6;
+
+        r8 = staticinvoke <JavaScript.Environment.index_1.textContent: JavaScript.Environment.index_1.textContent.trim.JavaScript.FunctionOutput trim(JavaScript.Object)>(r13);
+
+        r13 = r1;
+
+        r12 = r8;
+
+        r9 = staticinvoke <Hbc.GlobalObject.console: Hbc.GlobalObject.console.log.JavaScript.FunctionOutput log(JavaScript.Object,JavaScript.Object)>(r13, r12);
+
+        r3 = r9;
+
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_0 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 0);
+
+        r4 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_0.nextNode hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r1, 5, "nextNode");
+
+        r13 = r1;
+
+        r5 = staticinvoke <JavaScript.Environment.index_0: JavaScript.Environment.index_0.nextNode.JavaScript.FunctionOutput nextNode(JavaScript.Object)>(r13);
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 1, r5);
+
+        if r5 == 0 goto label2;
+
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_1 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 1);
+
+        if r1 == 1 goto label1;
+
+     label2:
+        r1 = r3;
+
+        return r1;
+    }
+}

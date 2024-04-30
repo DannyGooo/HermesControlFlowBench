@@ -1,0 +1,127 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 2
+  String count: 9
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..0]: A
+s1[ASCII, 1..26]: Parameter is not a number!
+s2[ASCII, 27..32]: global
+i3[ASCII, 33..37] #9102A3D0: Error
+i4[ASCII, 38..44] #629A2BFD: console
+i5[ASCII, 45..49] #2CC2B0DA: error
+i6[ASCII, 50..60] #486EAD33: getRectArea
+i7[ASCII, 61..65] #EB182578: isNaN
+i8[ASCII, 66..74] #807C5F3D: prototype
+
+Function<global>(1 params, 21 registers, 1 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    DeclareGlobalVar  "getRectArea"
+    CreateEnvironment r0
+    GetGlobalObject   r1
+    LoadConstUndefined r2
+    LoadConstUInt8    r3, 3
+    LoadConstString   r4, "A"
+    CreateClosure     r5, r0, 1
+    PutById           r1, r5, 1, "getRectArea"
+    Mov               r6, r2
+L4:
+    GetByIdShort      r5, r1, 1, "getRectArea"
+    Mov               r14, r2
+    Mov               r13, r3
+    Mov               r12, r4
+    Call              r7, r5, 3
+    Mov               r6, r7
+L5:
+    Jmp               L2
+L1:
+    Catch             r5
+    StoreToEnvironment r0, 0, r5
+    TryGetById        r7, r1, 2, "console"
+    GetByIdShort      r8, r7, 3, "error"
+    LoadFromEnvironment r9, r0, 0
+    Mov               r14, r7
+    Mov               r13, r9
+    Call              r10, r8, 2
+    Mov               r6, r10
+L2:
+    Mov               r5, r6
+    Ret               r5
+
+Exception Handlers:
+0: start = L4, end = L5, target = L1
+
+Function<getRectArea>(3 params, 18 registers, 2 symbols):
+Offset in debug table: source 0x001c, lexical 0x0000
+    CreateEnvironment r0
+    LoadParam         r1, 1
+    LoadParam         r2, 2
+    GetGlobalObject   r3
+    LoadConstUndefined r4
+    LoadConstString   r5, "Parameter is not a number!"
+    StoreToEnvironment r0, 0, r1
+    StoreToEnvironment r0, 1, r2
+    TryGetById        r6, r3, 1, "isNaN"
+    LoadFromEnvironment r7, r0, 0
+    Mov               r11, r4
+    Mov               r10, r7
+    Call              r8, r6, 2
+    JmpTrue           L1, r8
+    TryGetById        r1, r3, 1, "isNaN"
+    LoadFromEnvironment r2, r0, 1
+    Mov               r11, r4
+    Mov               r10, r2
+    Call              r6, r1, 2
+    JmpTrue           L1, r6
+    Ret               r4
+L1:
+    TryGetById        r1, r3, 2, "Error"
+    GetByIdShort      r2, r1, 3, "prototype"
+    CreateThis        r6, r2, r1
+    Mov               r11, r6
+    Mov               r10, r5
+    Construct         r7, r1, 2
+    SelectObject      r8, r6, r7
+    Throw             r8
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/throw/throw_00.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 23: line 1 col 1
+    bc 32: line 8 col 5
+    bc 46: line 8 col 16
+    bc 53: line 9 col 3
+    bc 55: line 9 col 5
+    bc 61: line 10 col 5
+    bc 67: line 10 col 18
+    bc 82: line 10 col 18
+  0x001c  function idx 1, starts at line 1 col 1
+    bc 24: line 2 col 9
+    bc 40: line 2 col 14
+    bc 47: line 2 col 25
+    bc 63: line 2 col 30
+    bc 72: line 3 col 17
+    bc 78: line 3 col 22
+    bc 83: line 3 col 22
+    bc 93: line 3 col 22
+    bc 101: line 3 col 7
+  0x003b  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

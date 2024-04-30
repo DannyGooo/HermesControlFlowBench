@@ -1,0 +1,104 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 4
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..5]: global
+i1[ASCII, 6..12] #629A2BFD: console
+i2[ASCII, 13..18] #15A9FF56: length
+i3[ASCII, 19..21] #1C35E808: log
+
+Array Buffer:
+[int 1]
+[int 2]
+[int 3]
+[int 4]
+[int 5]
+[int 6]
+Function<global>(1 params, 23 registers, 3 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    LoadConstZero     r2
+    LoadConstUInt8    r3, 1
+    GetGlobalObject   r4
+    StoreNPToEnvironment r0, 0, r1
+    StoreNPToEnvironment r0, 1, r1
+    StoreNPToEnvironment r0, 2, r1
+    Mov               r5, r1
+    NewArrayWithBuffer r6, 6, 6, 0
+    StoreToEnvironment r0, 0, r6
+    StoreNPToEnvironment r0, 1, r2
+    LoadFromEnvironment r7, r0, 0
+    GetByIdShort      r8, r7, 1, "length"
+    Sub               r9, r8, r3
+    StoreToEnvironment r0, 2, r9
+    LoadFromEnvironment r1, r0, 1
+    LoadFromEnvironment r2, r0, 2
+    Less              r6, r1, r2
+    JmpFalse          L1, r6
+L2:
+    TryGetById        r1, r4, 2, "console"
+    GetByIdShort      r2, r1, 3, "log"
+    LoadFromEnvironment r6, r0, 0
+    LoadFromEnvironment r7, r0, 1
+    GetByVal          r8, r6, r7
+    LoadFromEnvironment r9, r0, 0
+    LoadFromEnvironment r10, r0, 2
+    GetByVal          r11, r9, r10
+    Mov               r16, r1
+    Mov               r15, r8
+    Mov               r14, r11
+    Call              r12, r2, 3
+    Mov               r5, r12
+    LoadFromEnvironment r1, r0, 1
+    ToNumber          r2, r1
+    AddN              r6, r2, r3
+    StoreToEnvironment r0, 1, r6
+    LoadFromEnvironment r7, r0, 2
+    ToNumber          r8, r7
+    SubN              r9, r8, r3
+    StoreToEnvironment r0, 2, r9
+    LoadFromEnvironment r1, r0, 1
+    LoadFromEnvironment r2, r0, 2
+    Less              r6, r1, r2
+    JmpTrue           L2, r6
+L1:
+    Mov               r1, r5
+    Ret               r1
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/for/for_15.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 46: line 2 col 24
+    bc 51: line 2 col 21
+    bc 67: line 2 col 37
+    bc 74: line 3 col 3
+    bc 80: line 3 col 14
+    bc 93: line 3 col 18
+    bc 105: line 3 col 26
+    bc 118: line 3 col 14
+    bc 129: line 2 col 45
+    bc 144: line 2 col 50
+    bc 163: line 2 col 37
+  0x0025  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

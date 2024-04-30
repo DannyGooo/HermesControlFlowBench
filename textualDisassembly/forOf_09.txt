@@ -1,0 +1,153 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 3
+  String count: 7
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 1
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..-1]: 
+s1[ASCII, 0..7]: ?anon_0_
+s2[ASCII, 8..13]: global
+i3[ASCII, 14..19] #FB8C3D32: Symbol
+i4[ASCII, 20..26] #629A2BFD: console
+i5[ASCII, 27..34] #1F1F1786: iterator
+i6[ASCII, 35..37] #1C35E808: log
+
+Function Source Table:
+  Function ID 2 -> s0
+
+Function<global>(1 params, 21 registers, 2 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    GetGlobalObject   r2
+    StoreNPToEnvironment r0, 0, r1
+    StoreNPToEnvironment r0, 1, r1
+    Mov               r3, r1
+    NewObject         r4
+    TryGetById        r5, r2, 1, "Symbol"
+    GetByIdShort      r6, r5, 2, "iterator"
+    CreateGeneratorClosure r7, r0, 1
+    PutOwnByVal       r4, r7, r6, 1
+    StoreToEnvironment r0, 0, r4
+    LoadFromEnvironment r8, r0, 0
+    Mov               r10, r8
+    IteratorBegin     r11, r10
+    Mov               r9, r11
+L3:
+    IteratorNext      r4, r9, r10
+    Mov               r5, r9
+    StrictEq          r6, r5, r1
+    JmpTrue           L1, r6
+L5:
+    StoreToEnvironment r0, 1, r4
+    TryGetById        r5, r2, 3, "console"
+    GetByIdShort      r6, r5, 4, "log"
+    LoadFromEnvironment r7, r0, 1
+    Mov               r14, r5
+    Mov               r13, r7
+    Call              r8, r6, 2
+    Mov               r3, r8
+L6:
+    Jmp               L3
+L2:
+    Catch             r5
+    IteratorClose     r9, 1
+    Throw             r5
+L1:
+    Mov               r5, r3
+    Ret               r5
+
+Exception Handlers:
+0: start = L5, end = L6, target = L2
+
+NCFunction<>(1 params, 3 registers, 0 symbols):
+    CreateEnvironment r0
+    CreateGenerator   r1, r0, 2
+    Ret               r1
+
+Function<?anon_0_>(1 params, 13 registers, 0 symbols):
+Offset in debug table: source 0x0028, lexical 0x0000
+    StartGenerator   
+    CreateEnvironment r0
+    LoadConstUInt8    r0, 1
+    LoadConstUInt8    r1, 2
+    LoadConstUInt8    r2, 3
+    LoadConstUndefined r3
+    ResumeGenerator   r5, r4
+    Mov               r6, r4
+    JmpTrue           L1, r6
+    SaveGenerator     L2
+    Ret               r0
+L2:
+    ResumeGenerator   r6, r4
+    Mov               r7, r4
+    JmpTrue           L3, r7
+    SaveGenerator     L4
+    Ret               r1
+L4:
+    ResumeGenerator   r8, r7
+    Mov               r9, r7
+    JmpTrue           L5, r9
+    SaveGenerator     L6
+    Ret               r2
+L6:
+    ResumeGenerator   r10, r9
+    Mov               r11, r9
+    JmpTrue           L7, r11
+    CompleteGenerator
+    Ret               r3
+L7:
+    CompleteGenerator
+    Ret               r10
+L5:
+    CompleteGenerator
+    Ret               r8
+L3:
+    CompleteGenerator
+    Ret               r6
+L1:
+    CompleteGenerator
+    Ret               r5
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/forOf/forOf_09.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 19: line 2 col 7
+    bc 25: line 2 col 13
+    bc 35: line 1 col 18
+    bc 51: line 9 col 3
+    bc 57: line 9 col 3
+    bc 75: line 10 col 5
+    bc 81: line 10 col 16
+    bc 96: line 10 col 16
+    bc 103: line 11 col 3
+    bc 105: line 11 col 3
+    bc 107: line 11 col 3
+    bc 110: line 11 col 3
+  0x0028  function idx 2, starts at line 2 col 5
+    bc 23: line 3 col 7
+    bc 27: line 3 col 7
+    bc 36: line 4 col 7
+    bc 40: line 4 col 7
+    bc 49: line 5 col 7
+    bc 53: line 5 col 7
+  0x003e  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

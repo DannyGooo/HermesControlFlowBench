@@ -1,0 +1,143 @@
+public class HermesByteCode
+{
+
+    public static JavaScript.Function.HermesByteCode.global.JavaScript.FunctionOutput global(JavaScript.Object)
+    {
+        JavaScript.FunctionOutput r1, r7, r11;
+        JavaScript.Environment.index_0.message r10;
+        JavaScript.Exception Catch;
+        JavaScript.Environment_this r0;
+        JavaScript.Number r12;
+        JavaScript.String r3, r4, r6;
+        Hbc.GlobalObject r2;
+        Hbc.GlobalObject.console.error r8;
+        JavaScript.Parameter_0 arg0;
+        JavaScript.Object 1, r16, r15, r14;
+        JavaScript.Environment.index_0 r9;
+        JavaScript.Number_1 r5;
+
+        arg0 := @parameter0: JavaScript.Parameter_0;
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this CreateEnvironment()>();
+
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.Undefined LoadConstUndefined()>();
+
+        r2 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject GetGlobalObject()>();
+
+        r3 = staticinvoke <Hbc.Opcode: JavaScript.String LoadConstString(JavaScript.String)>("finally");
+
+        r4 = staticinvoke <Hbc.Opcode: JavaScript.String LoadConstString(JavaScript.String)>("oops");
+
+        r5 = staticinvoke <Hbc.Opcode: JavaScript.Number_1 LoadConstUInt8(JavaScript.Number)>(1);
+
+        r6 = staticinvoke <Hbc.Opcode: JavaScript.String LoadConstString(JavaScript.String)>("outer");
+
+        r7 = r1;
+
+     label1:
+        r1 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.Error hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 1, "Error");
+
+        r8 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.Error.prototype hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r1, 2, "prototype");
+
+        r9 = staticinvoke <Hbc.Opcode: JavaScript.CreateThis CreateThis(JavaScript.Object,JavaScript.Object)>(r8, r1);
+
+        r16 = r9;
+
+        r15 = r4;
+
+        r10 = staticinvoke <Hbc.GlobalObject: Hbc.GlobalObject.Error.JavaScript.FunctionOutput Error(JavaScript.Object,JavaScript.Object)>(r16, r15);
+
+        r11 = staticinvoke <Hbc.Opcode: JavaScript.SelectObject SelectObject(JavaScript.Object,JavaScript.Object)>(r9, r10);
+
+        throw r11;
+
+     label2:
+        Catch := @caughtexception;
+
+        r8 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.console hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 3, "console");
+
+        r9 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.console.log hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r8, 4, "log");
+
+        r16 = r8;
+
+        r15 = r3;
+
+        r10 = staticinvoke <Hbc.GlobalObject.console: Hbc.GlobalObject.console.log.JavaScript.FunctionOutput log(JavaScript.Object,JavaScript.Object)>(r16, r15);
+
+        r7 = r10;
+
+        throw r1;
+
+     label3:
+        Catch := @caughtexception;
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 0, r1);
+
+        r8 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.cipherChar hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 5, "cipherChar");
+
+        r9 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.fromChar hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 6, "fromChar");
+
+        r10 = staticinvoke <Hbc.Opcode: JavaScript.Boolean StrictEq(JavaScript.Object,JavaScript.Object)>(r8, r9);
+
+        if r10 == 1 goto label4;
+
+        r1 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.result hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 7, "result");
+
+        r8 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.clearChar hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 8, "clearChar");
+
+        r9 = staticinvoke <Hbc.Opcode: JavaScript.Number Add(JavaScript.Object,JavaScript.Object)>(r1, r8);
+
+        staticinvoke <Hbc.Opcode: void PutById(JavaScript.Object,JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, r9, 1, "result");
+
+        r7 = r9;
+
+        goto label5;
+
+     label4:
+        r1 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.result hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 7, "result");
+
+        r8 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.toChar hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 9, "toChar");
+
+        r9 = staticinvoke <Hbc.Opcode: JavaScript.Number Add(JavaScript.Object,JavaScript.Object)>(r1, r8);
+
+        staticinvoke <Hbc.Opcode: void PutById(JavaScript.Object,JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, r9, 1, "result");
+
+        r7 = r9;
+
+        r10 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.x hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 10, "x");
+
+        r11 = staticinvoke <Hbc.Opcode: JavaScript.Number ToNumber(JavaScript.Object)>(r10);
+
+        r12 = staticinvoke <Hbc.Opcode: JavaScript.Number AddN(JavaScript.Object,JavaScript.Object)>(r11, r5);
+
+        staticinvoke <Hbc.Opcode: void PutById(JavaScript.Object,JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, r12, 2, "x");
+
+        r7 = r11;
+
+     label5:
+        r1 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.console hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 3, "console");
+
+        r8 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.console.error hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r1, 11, "error");
+
+        r9 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_0 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 0);
+
+        r10 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_0.message hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r9, 12, "message");
+
+        r16 = r1;
+
+        r15 = r6;
+
+        r14 = r10;
+
+        r11 = staticinvoke <Hbc.GlobalObject.console: Hbc.GlobalObject.console.error.JavaScript.FunctionOutput error(JavaScript.Object,JavaScript.Object,JavaScript.Object)>(r16, r15, r14);
+
+        r7 = r11;
+
+        r1 = r7;
+
+        return r1;
+
+        catch JavaScript.Exception from label1 to label2 with label2;
+        catch JavaScript.Exception from label1 to label3 with label3;
+    }
+}

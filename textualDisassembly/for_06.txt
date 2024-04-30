@@ -1,0 +1,73 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 3
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..5]: global
+i1[ASCII, 6..12] #629A2BFD: console
+i2[ASCII, 13..15] #1C35E808: log
+
+Function<global>(1 params, 21 registers, 1 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    LoadConstZero     r2
+    GetGlobalObject   r3
+    LoadConstUInt8    r4, 1
+    LoadConstUInt8    r5, 3
+    StoreNPToEnvironment r0, 0, r1
+    Mov               r6, r1
+    StoreNPToEnvironment r0, 0, r2
+    LoadFromEnvironment r1, r0, 0
+    LessEq            r2, r1, r5
+    JmpFalse          L1, r2
+L2:
+    TryGetById        r1, r3, 1, "console"
+    GetByIdShort      r2, r1, 2, "log"
+    LoadFromEnvironment r7, r0, 0
+    Mov               r14, r1
+    Mov               r13, r7
+    Call              r8, r2, 2
+    Mov               r6, r8
+    LoadFromEnvironment r9, r0, 0
+    ToNumber          r10, r9
+    AddN              r11, r10, r4
+    StoreToEnvironment r0, 0, r11
+    Mov               r6, r10
+    LoadFromEnvironment r1, r0, 0
+    LessEq            r2, r1, r5
+    JmpTrue           L2, r2
+L1:
+    Mov               r1, r6
+    Ret               r1
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/for/for_06.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 29: line 3 col 8
+    bc 36: line 4 col 3
+    bc 42: line 4 col 14
+    bc 57: line 4 col 14
+    bc 68: line 5 col 4
+    bc 86: line 3 col 8
+  0x0016  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

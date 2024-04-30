@@ -1,0 +1,106 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 2
+  String count: 4
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..5]: global
+i1[ASCII, 6..12] #629A2BFD: console
+i2[ASCII, 13..15] #9290584E: foo
+i3[ASCII, 16..18] #1C35E808: log
+
+Function<global>(1 params, 22 registers, 0 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    DeclareGlobalVar  "foo"
+    CreateEnvironment r0
+    GetGlobalObject   r1
+    LoadConstUndefined r2
+    LoadConstUInt8    r3, 1
+    LoadConstUInt8    r4, 2
+    LoadConstUInt8    r5, 3
+    CreateClosure     r6, r0, 1
+    PutById           r1, r6, 1, "foo"
+    Mov               r7, r2
+    GetByIdShort      r8, r1, 1, "foo"
+    Mov               r15, r2
+    Mov               r14, r3
+    Mov               r13, r4
+    Mov               r12, r5
+    Call              r9, r8, 4
+    Mov               r7, r9
+    Mov               r10, r7
+    Ret               r10
+
+Function<foo>(1 params, 18 registers, 1 symbols):
+Offset in debug table: source 0x000d, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    GetGlobalObject   r2
+    Mov               r3, r1
+    StoreNPToEnvironment r0, 0, r1
+    ReifyArguments    r3
+    Mov               r6, r3
+    Mov               r5, r6
+    IteratorBegin     r7, r5
+    Mov               r4, r7
+L3:
+    IteratorNext      r3, r4, r5
+    Mov               r6, r4
+    StrictEq          r7, r6, r1
+    JmpTrue           L1, r7
+L5:
+    StoreToEnvironment r0, 0, r3
+    TryGetById        r6, r2, 1, "console"
+    GetByIdShort      r7, r6, 2, "log"
+    LoadFromEnvironment r8, r0, 0
+    Mov               r11, r6
+    Mov               r10, r8
+    Call              r9, r7, 2
+L6:
+    Jmp               L3
+L2:
+    Catch             r6
+    IteratorClose     r4, 1
+    Throw             r6
+L1:
+    Ret               r1
+
+Exception Handlers:
+0: start = L5, end = L6, target = L2
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/forOf/forOf_06.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 25: line 1 col 1
+    bc 34: line 7 col 3
+    bc 51: line 7 col 6
+  0x000d  function idx 1, starts at line 1 col 1
+    bc 21: line 2 col 5
+    bc 27: line 2 col 5
+    bc 45: line 3 col 7
+    bc 51: line 3 col 18
+    bc 66: line 3 col 18
+    bc 70: line 4 col 5
+    bc 72: line 4 col 5
+    bc 74: line 4 col 5
+    bc 77: line 4 col 5
+  0x002c  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

@@ -1,0 +1,62 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 4
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..13]: XMLHttpRequest
+s1[ASCII, 14..18]: fetch
+s2[ASCII, 19..24]: global
+i3[ASCII, 25..34] #F3091991: globalThis
+
+Function<global>(1 params, 10 registers, 0 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r0
+    GetGlobalObject   r1
+    LoadConstString   r2, "fetch"
+    LoadConstTrue     r3
+    LoadConstString   r4, "XMLHttpRequest"
+    Mov               r5, r0
+    TryGetById        r6, r1, 1, "globalThis"
+    IsIn              r7, r2, r6
+    StrictEq          r8, r7, r3
+    JmpTrue           L1, r8
+    TryGetById        r0, r1, 1, "globalThis"
+    IsIn              r2, r4, r0
+    StrictEq          r6, r2, r3
+    JmpTrue           L2, r6
+    Jmp               L1
+L2:
+    Jmp               L1
+L1:
+    Mov               r0, r5
+    Ret               r0
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/switch/switch_06.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 19: line 2 col 21
+    bc 25: line 2 col 10
+    bc 36: line 5 col 30
+    bc 42: line 5 col 10
+  0x0010  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

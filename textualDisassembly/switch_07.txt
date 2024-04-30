@@ -1,0 +1,139 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 12
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..22]: This shape is a circle.
+s1[ASCII, 23..52]: This shape is a quadrilateral.
+s2[ASCII, 53..78]: This shape is a rectangle.
+s3[ASCII, 79..101]: This shape is a square.
+s4[ASCII, 102..107]: global
+i5[ASCII, 108..114] #629A2BFD: console
+i6[ASCII, 115..122] #A2B5D87A: isCircle
+i7[ASCII, 123..137] #EA6EB318: isQuadrilateral
+i8[ASCII, 138..148] #63229FF9: isRectangle
+i9[ASCII, 149..156] #A7761A0C: isSquare
+i10[ASCII, 157..159] #1C35E808: log
+i11[ASCII, 160..164] #4A5FAEF1: shape
+
+Function<global>(1 params, 21 registers, 0 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r0
+    GetGlobalObject   r1
+    LoadConstTrue     r2
+    LoadConstString   r3, "This shape is a square."
+    LoadConstString   r4, "This shape is a rectangle."
+    LoadConstString   r5, "This shape is a quadrilateral."
+    LoadConstString   r6, "This shape is a circle."
+    Mov               r7, r0
+    TryGetById        r8, r1, 1, "isSquare"
+    TryGetById        r9, r1, 2, "shape"
+    Mov               r14, r0
+    Mov               r13, r9
+    Call              r10, r8, 2
+    StrictEq          r11, r10, r2
+    JmpTrue           L1, r11
+    TryGetById        r8, r1, 3, "isRectangle"
+    TryGetById        r9, r1, 2, "shape"
+    Mov               r14, r0
+    Mov               r13, r9
+    Call              r10, r8, 2
+    StrictEq          r11, r10, r2
+    JmpTrue           L2, r11
+    TryGetById        r8, r1, 4, "isQuadrilateral"
+    TryGetById        r9, r1, 2, "shape"
+    Mov               r14, r0
+    Mov               r13, r9
+    Call              r10, r8, 2
+    StrictEq          r11, r10, r2
+    JmpTrue           L3, r11
+    TryGetById        r8, r1, 5, "isCircle"
+    TryGetById        r9, r1, 2, "shape"
+    Mov               r14, r0
+    Mov               r13, r9
+    Call              r10, r8, 2
+    StrictEq          r11, r10, r2
+    JmpTrue           L4, r11
+    Jmp               L5
+L4:
+    TryGetById        r8, r1, 6, "console"
+    GetByIdShort      r9, r8, 7, "log"
+    Mov               r14, r8
+    Mov               r13, r6
+    Call              r10, r9, 2
+    Mov               r7, r10
+    Jmp               L5
+L1:
+    TryGetById        r8, r1, 6, "console"
+    GetByIdShort      r9, r8, 7, "log"
+    Mov               r14, r8
+    Mov               r13, r3
+    Call              r10, r9, 2
+    Mov               r7, r10
+L2:
+    TryGetById        r8, r1, 6, "console"
+    GetByIdShort      r9, r8, 7, "log"
+    Mov               r14, r8
+    Mov               r13, r4
+    Call              r10, r9, 2
+    Mov               r7, r10
+L3:
+    TryGetById        r8, r1, 6, "console"
+    GetByIdShort      r9, r8, 7, "log"
+    Mov               r14, r8
+    Mov               r13, r5
+    Call              r10, r9, 2
+    Mov               r7, r10
+L5:
+    Mov               r8, r7
+    Ret               r8
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/switch/switch_07.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 27: line 2 col 10
+    bc 33: line 2 col 19
+    bc 45: line 2 col 18
+    bc 56: line 5 col 10
+    bc 62: line 5 col 22
+    bc 74: line 5 col 21
+    bc 85: line 7 col 10
+    bc 91: line 7 col 26
+    bc 103: line 7 col 25
+    bc 114: line 10 col 10
+    bc 120: line 10 col 19
+    bc 132: line 10 col 18
+    bc 145: line 11 col 7
+    bc 151: line 11 col 18
+    bc 162: line 11 col 18
+    bc 171: line 3 col 7
+    bc 177: line 3 col 18
+    bc 188: line 3 col 18
+    bc 195: line 6 col 7
+    bc 201: line 6 col 18
+    bc 212: line 6 col 18
+    bc 219: line 8 col 7
+    bc 225: line 8 col 18
+    bc 236: line 8 col 18
+  0x004c  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

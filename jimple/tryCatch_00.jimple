@@ -1,0 +1,65 @@
+public class HermesByteCode
+{
+
+    public static JavaScript.Function.HermesByteCode.global.JavaScript.FunctionOutput global(JavaScript.Object)
+    {
+        JavaScript.FunctionOutput r3, r4, r8;
+        Hbc.GlobalObject.console.error r6;
+        JavaScript.Exception Catch;
+        Hbc.GlobalObject.console r5;
+        JavaScript.Parameter_0 arg0;
+        JavaScript.Environment_this r0;
+        JavaScript.Object r11, r10;
+        JavaScript.Environment.index_0 r7;
+        JavaScript.Undefined r1;
+        Hbc.GlobalObject r2;
+
+        arg0 := @parameter0: JavaScript.Parameter_0;
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this CreateEnvironment()>();
+
+        r1 = staticinvoke <Hbc.Opcode: JavaScript.Undefined LoadConstUndefined()>();
+
+        r2 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject GetGlobalObject()>();
+
+        r3 = r1;
+
+     label1:
+        r4 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.nonExistentFunction hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 1, "nonExistentFunction");
+
+        r11 = r1;
+
+        r5 = staticinvoke <Hbc.GlobalObject: Hbc.GlobalObject.nonExistentFunction.JavaScript.FunctionOutput nonExistentFunction(JavaScript.Object)>(r11);
+
+        r3 = r5;
+
+     label2:
+        goto label4;
+
+     label3:
+        Catch := @caughtexception;
+
+        staticinvoke <Hbc.Opcode: JavaScript.Environment StoreToEnvironment(JavaScript.Environment,int,JavaScript.Object)>(r0, 0, r4);
+
+        r5 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.console hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r2, 2, "console");
+
+        r6 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.console.error hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r5, 3, "error");
+
+        r7 = staticinvoke <Hbc.Opcode: JavaScript.Environment.index_0 LoadFromEnvironment(JavaScript.Object,JavaScript.Number)>(r0, 0);
+
+        r11 = r5;
+
+        r10 = r7;
+
+        r8 = staticinvoke <Hbc.GlobalObject.console: Hbc.GlobalObject.console.error.JavaScript.FunctionOutput error(JavaScript.Object,JavaScript.Object)>(r11, r10);
+
+        r3 = r8;
+
+     label4:
+        r4 = r3;
+
+        return r4;
+
+        catch JavaScript.Exception from label1 to label2 with label3;
+    }
+}

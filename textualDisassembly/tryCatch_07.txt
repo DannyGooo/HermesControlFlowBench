@@ -1,0 +1,139 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 2
+  String count: 12
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..-1]: 
+s1[ASCII, 0..6]: finally
+s2[ASCII, 7..12]: global
+s3[ASCII, 13..17]: inner
+s4[ASCII, 18..21]: oops
+s5[ASCII, 22..26]: outer
+i6[ASCII, 27..31] #9102A3D0: Error
+i7[ASCII, 32..38] #629A2BFD: console
+i8[ASCII, 39..43] #2CC2B0DA: error
+i9[ASCII, 44..46] #1C35E808: log
+i10[ASCII, 47..53] #63D87C1C: message
+i11[ASCII, 54..62] #807C5F3D: prototype
+
+Function<global>(1 params, 16 registers, 2 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadThisNS        r1
+    LoadConstUndefined r2
+    StoreToEnvironment r0, 0, r1
+    GetNewTarget      r3
+    StoreToEnvironment r0, 1, r3
+    Mov               r4, r2
+    CreateClosure     r5, r0, 1
+    Mov               r9, r2
+    Call              r6, r5, 1
+    Mov               r4, r6
+    Mov               r7, r4
+    Ret               r7
+
+NCFunction<>(1 params, 23 registers, 2 symbols):
+Offset in debug table: source 0x0007, lexical 0x0000
+    CreateEnvironment r0
+    GetGlobalObject   r1
+    LoadConstString   r2, "outer"
+    LoadConstUndefined r3
+    LoadConstString   r4, "finally"
+    LoadConstString   r5, "inner"
+    LoadConstString   r6, "oops"
+L5:
+    TryGetById        r7, r1, 1, "Error"
+    GetByIdShort      r8, r7, 2, "prototype"
+    CreateThis        r9, r8, r7
+    Mov               r16, r9
+    Mov               r15, r6
+    Construct         r10, r7, 2
+    SelectObject      r11, r9, r10
+    Throw             r11
+L1:
+    Catch             r7
+    StoreToEnvironment r0, 0, r7
+    TryGetById        r8, r1, 3, "console"
+    GetByIdShort      r9, r8, 4, "error"
+    LoadFromEnvironment r10, r0, 0
+    GetByIdShort      r11, r10, 5, "message"
+    Mov               r16, r8
+    Mov               r15, r5
+    Mov               r14, r11
+    Call              r12, r9, 3
+    LoadFromEnvironment r12, r0, 0
+    Throw             r12
+L2:
+    Catch             r7
+    TryGetById        r8, r1, 3, "console"
+    GetByIdShort      r9, r8, 6, "log"
+    Mov               r16, r8
+    Mov               r15, r4
+    Call              r10, r9, 2
+L6:
+    Ret               r3
+L3:
+    Catch             r8
+    StoreToEnvironment r0, 1, r8
+    TryGetById        r9, r1, 3, "console"
+    GetByIdShort      r10, r9, 4, "error"
+    LoadFromEnvironment r11, r0, 1
+    GetByIdShort      r12, r11, 5, "message"
+    Mov               r16, r9
+    Mov               r15, r2
+    Mov               r14, r12
+    Call              r13, r10, 3
+    Ret               r3
+
+Exception Handlers:
+0: start = L5, end = L1, target = L1
+1: start = L5, end = L2, target = L2
+2: start = L5, end = L6, target = L3
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/tryCatch/tryCatch_07.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 27: line 15 col 5
+  0x0007  function idx 1, starts at line 1 col 2
+    bc 22: line 4 col 19
+    bc 28: line 4 col 24
+    bc 33: line 4 col 24
+    bc 43: line 4 col 24
+    bc 51: line 4 col 9
+    bc 53: line 5 col 9
+    bc 59: line 6 col 9
+    bc 65: line 6 col 22
+    bc 74: line 6 col 34
+    bc 88: line 6 col 22
+    bc 96: line 7 col 9
+    bc 98: line 8 col 17
+    bc 100: line 9 col 9
+    bc 106: line 9 col 20
+    bc 117: line 9 col 20
+    bc 121: line 10 col 9
+    bc 123: line 12 col 7
+    bc 129: line 13 col 7
+    bc 135: line 13 col 20
+    bc 144: line 13 col 32
+    bc 158: line 13 col 20
+  0x004a  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

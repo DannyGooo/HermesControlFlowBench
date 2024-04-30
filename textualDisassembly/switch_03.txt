@@ -1,0 +1,91 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 10
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..2]: Cow
+s1[ASCII, 3..10]: Dinosaur
+s2[ASCII, 11..13]: Dog
+s3[ASCII, 14..20]: Giraffe
+s4[ASCII, 21..23]: Pig
+s5[ASCII, 24..46]: This animal is extinct.
+s6[ASCII, 47..73]: This animal is not extinct.
+s7[ASCII, 74..79]: global
+i8[ASCII, 80..86] #629A2BFD: console
+i9[ASCII, 87..89] #1C35E808: log
+
+Function<global>(1 params, 22 registers, 1 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    LoadConstString   r2, "Giraffe"
+    GetGlobalObject   r3
+    LoadConstString   r4, "This animal is not extinct."
+    LoadConstString   r5, "This animal is extinct."
+    LoadConstString   r6, "Dinosaur"
+    LoadConstString   r7, "Pig"
+    LoadConstString   r8, "Dog"
+    LoadConstString   r9, "Cow"
+    StoreNPToEnvironment r0, 0, r1
+    Mov               r10, r1
+    StoreToEnvironment r0, 0, r2
+    LoadFromEnvironment r11, r0, 0
+    StrictEq          r0, r9, r11
+    JmpTrue           L1, r0
+    StrictEq          r0, r2, r11
+    JmpTrue           L1, r0
+    StrictEq          r0, r8, r11
+    JmpTrue           L1, r0
+    StrictEq          r0, r7, r11
+    JmpTrue           L1, r0
+    StrictEq          r0, r6, r11
+    JmpFalse          L2, r0
+L2:
+    TryGetById        r0, r3, 1, "console"
+    GetByIdShort      r1, r0, 2, "log"
+    Mov               r15, r0
+    Mov               r14, r5
+    Call              r12, r1, 2
+    Mov               r10, r12
+    Jmp               L3
+L1:
+    TryGetById        r0, r3, 1, "console"
+    GetByIdShort      r1, r0, 2, "log"
+    Mov               r15, r0
+    Mov               r14, r4
+    Call              r12, r1, 2
+    Mov               r10, r12
+L3:
+    Mov               r0, r10
+    Ret               r0
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/switch/switch_03.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 84: line 11 col 5
+    bc 90: line 11 col 16
+    bc 101: line 11 col 16
+    bc 110: line 7 col 5
+    bc 116: line 7 col 16
+    bc 127: line 7 col 16
+  0x0017  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

@@ -1,0 +1,61 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 3
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..5]: global
+s1[ASCII, 6..16]: myException
+i2[ASCII, 17..27] #C80F0220: logMyErrors
+
+Function<global>(1 params, 18 registers, 1 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    GetGlobalObject   r2
+    LoadConstString   r3, "myException"
+    Mov               r4, r1
+L3:
+    Throw             r3
+L1:
+    Catch             r5
+    StoreToEnvironment r0, 0, r5
+    TryGetById        r6, r2, 1, "logMyErrors"
+    LoadFromEnvironment r7, r0, 0
+    Mov               r11, r1
+    Mov               r10, r7
+    Call              r8, r6, 2
+    Mov               r4, r8
+    Mov               r5, r4
+    Ret               r5
+
+Exception Handlers:
+0: start = L3, end = L1, target = L1
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/tryCatch/tryCatch_01.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 13: line 2 col 5
+    bc 15: line 3 col 5
+    bc 21: line 5 col 5
+    bc 37: line 5 col 16
+  0x0010  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

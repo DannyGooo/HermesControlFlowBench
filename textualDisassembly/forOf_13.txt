@@ -1,0 +1,184 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 3
+  String count: 12
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..-1]: 
+s1[ASCII, 0..5]: global
+s2[ASCII, 6..10]: hello
+i3[ASCII, 11..15] #B976BAAB: Array
+i4[ASCII, 16..21] #9615E9FA: Object
+i5[ASCII, 22..30] #67995D9B: arrCustom
+i6[ASCII, 31..37] #629A2BFD: console
+i7[ASCII, 38..40] #9290584E: foo
+i8[ASCII, 41..46] #03C21263: hasOwn
+i9[ASCII, 47..49] #1C35E808: log
+i10[ASCII, 50..58] #BC5B2A0C: objCustom
+i11[ASCII, 59..67] #807C5F3D: prototype
+
+Array Buffer:
+[int 3]
+[int 5]
+[int 7]
+Function<global>(1 params, 31 registers, 2 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    GetGlobalObject   r2
+    LoadConstString   r3, "hello"
+    StoreNPToEnvironment r0, 0, r1
+    StoreNPToEnvironment r0, 1, r1
+    Mov               r4, r1
+    TryGetById        r5, r2, 1, "Object"
+    GetByIdShort      r6, r5, 2, "prototype"
+    CreateClosure     r7, r0, 1
+    PutById           r6, r7, 1, "objCustom"
+    Mov               r4, r7
+    TryGetById        r8, r2, 3, "Array"
+    GetByIdShort      r9, r8, 2, "prototype"
+    CreateClosure     r10, r0, 2
+    PutById           r9, r10, 2, "arrCustom"
+    Mov               r4, r10
+    NewArrayWithBuffer r11, 3, 3, 0
+    StoreToEnvironment r0, 0, r11
+    LoadFromEnvironment r12, r0, 0
+    PutById           r12, r3, 3, "foo"
+    Mov               r4, r3
+    LoadFromEnvironment r17, r0, 0
+    Mov               r14, r17
+    GetPNameList      r13, r14, r15, r16
+    JmpUndefined      L1, r13
+L2:
+    GetNextPName      r18, r13, r14, r15, r16
+    JmpUndefined      L1, r18
+    Mov               r3, r18
+    StoreToEnvironment r0, 1, r3
+    TryGetById        r5, r2, 4, "console"
+    GetByIdShort      r6, r5, 5, "log"
+    LoadFromEnvironment r7, r0, 1
+    Mov               r24, r5
+    Mov               r23, r7
+    Call              r8, r6, 2
+    Mov               r4, r8
+    Jmp               L2
+L1:
+    LoadFromEnvironment r8, r0, 0
+    Mov               r5, r8
+    GetPNameList      r3, r5, r6, r7
+    JmpUndefined      L3, r3
+L6:
+    GetNextPName      r9, r3, r5, r6, r7
+    JmpUndefined      L3, r9
+    Mov               r8, r9
+    StoreToEnvironment r0, 1, r8
+    TryGetById        r10, r2, 1, "Object"
+    GetByIdShort      r11, r10, 6, "hasOwn"
+    LoadFromEnvironment r12, r0, 0
+    LoadFromEnvironment r17, r0, 1
+    Mov               r24, r10
+    Mov               r23, r12
+    Mov               r22, r17
+    Call              r19, r11, 3
+    JmpTrue           L4, r19
+    Jmp               L5
+L4:
+    TryGetById        r8, r2, 4, "console"
+    GetByIdShort      r10, r8, 5, "log"
+    LoadFromEnvironment r11, r0, 1
+    Mov               r24, r8
+    Mov               r23, r11
+    Call              r12, r10, 2
+    Mov               r4, r12
+L5:
+    Jmp               L6
+L3:
+    LoadFromEnvironment r8, r0, 0
+    Mov               r11, r8
+    IteratorBegin     r12, r11
+    Mov               r10, r12
+L9:
+    IteratorNext      r8, r10, r11
+    Mov               r12, r10
+    StrictEq          r17, r12, r1
+    JmpTrue           L7, r17
+L11:
+    StoreToEnvironment r0, 1, r8
+    TryGetById        r12, r2, 4, "console"
+    GetByIdShort      r17, r12, 5, "log"
+    LoadFromEnvironment r19, r0, 1
+    Mov               r24, r12
+    Mov               r23, r19
+    Call              r20, r17, 2
+    Mov               r4, r20
+L12:
+    Jmp               L9
+L8:
+    Catch             r12
+    IteratorClose     r10, 1
+    Throw             r12
+L7:
+    Mov               r12, r4
+    Ret               r12
+
+Exception Handlers:
+0: start = L11, end = L12, target = L8
+
+Function<>(1 params, 2 registers, 0 symbols):
+    CreateEnvironment r0
+    LoadConstUndefined r0
+    Ret               r0
+
+Function<>(1 params, 2 registers, 0 symbols):
+    CreateEnvironment r0
+    LoadConstUndefined r0
+    Ret               r0
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/forOf/forOf_13.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 21: line 1 col 1
+    bc 27: line 1 col 7
+    bc 37: line 1 col 28
+    bc 46: line 2 col 1
+    bc 52: line 2 col 6
+    bc 62: line 2 col 27
+    bc 87: line 5 col 14
+    bc 127: line 8 col 3
+    bc 133: line 8 col 14
+    bc 148: line 8 col 14
+    bc 188: line 13 col 7
+    bc 194: line 13 col 20
+    bc 216: line 13 col 20
+    bc 225: line 14 col 5
+    bc 231: line 14 col 16
+    bc 246: line 14 col 16
+    bc 262: line 19 col 1
+    bc 268: line 19 col 1
+    bc 286: line 20 col 3
+    bc 292: line 20 col 14
+    bc 307: line 20 col 14
+    bc 314: line 21 col 1
+    bc 316: line 21 col 1
+    bc 318: line 21 col 1
+    bc 321: line 21 col 1
+  0x004f  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

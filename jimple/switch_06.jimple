@@ -1,0 +1,54 @@
+public class HermesByteCode
+{
+
+    public static JavaScript.Function.HermesByteCode.global.JavaScript.FunctionOutput global(JavaScript.Object)
+    {
+        JavaScript.Parameter_0 arg0;
+        JavaScript.String r4;
+        JavaScript.Boolean r2, r3, r6, r7, r8;
+        JavaScript.Undefined r0, r5;
+        Hbc.GlobalObject r1;
+
+        arg0 := @parameter0: JavaScript.Parameter_0;
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Environment_this CreateEnvironment()>();
+
+        r0 = staticinvoke <Hbc.Opcode: JavaScript.Undefined LoadConstUndefined()>();
+
+        r1 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject GetGlobalObject()>();
+
+        r2 = staticinvoke <Hbc.Opcode: JavaScript.String LoadConstString(JavaScript.String)>("fetch");
+
+        r3 = staticinvoke <Hbc.Opcode: JavaScript.Boolean LoadConstTrue()>();
+
+        r4 = staticinvoke <Hbc.Opcode: JavaScript.String LoadConstString(JavaScript.String)>("XMLHttpRequest");
+
+        r5 = r0;
+
+        r6 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.globalThis hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r1, 1, "globalThis");
+
+        r7 = staticinvoke <Hbc.Opcode: JavaScript.Boolean IsIn(JavaScript.Object,JavaScript.Object)>(r2, r6);
+
+        r8 = staticinvoke <Hbc.Opcode: JavaScript.Boolean StrictEq(JavaScript.Object,JavaScript.Object)>(r7, r3);
+
+        if r8 == 1 goto label2;
+
+        r0 = staticinvoke <Hbc.Opcode: Hbc.GlobalObject.globalThis hbcGet(JavaScript.Object,JavaScript.Number,JavaScript.String)>(r1, 1, "globalThis");
+
+        r2 = staticinvoke <Hbc.Opcode: JavaScript.Boolean IsIn(JavaScript.Object,JavaScript.Object)>(r4, r0);
+
+        r6 = staticinvoke <Hbc.Opcode: JavaScript.Boolean StrictEq(JavaScript.Object,JavaScript.Object)>(r2, r3);
+
+        if r6 == 1 goto label1;
+
+        goto label2;
+
+     label1:
+        goto label2;
+
+     label2:
+        r0 = r5;
+
+        return r0;
+    }
+}

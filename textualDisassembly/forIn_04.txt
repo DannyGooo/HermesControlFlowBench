@@ -1,0 +1,153 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 11
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..2]:  = 
+s1[ASCII, 3..8]: global
+s2[ASCII, 9..12]: obj.
+i3[ASCII, 13..26] #85BBF6F9: HermesInternal
+i4[ASCII, 27..32] #9615E9FA: Object
+i5[ASCII, 33..33] #00018270: a
+i6[ASCII, 34..39] #CB8DFA65: concat
+i7[ASCII, 40..46] #629A2BFD: console
+i8[ASCII, 47..60] #F974074A: defineProperty
+i9[ASCII, 61..70] #DF638EB0: enumerable
+i10[ASCII, 71..73] #1C35E808: log
+
+Function<global>(1 params, 39 registers, 3 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    LoadConstUInt8    r2, 1
+    LoadConstUInt8    r3, 2
+    GetGlobalObject   r4
+    LoadConstFalse    r5
+    LoadConstString   r6, "a"
+    LoadConstString   r7, "obj."
+    LoadConstString   r8, " = "
+    StoreNPToEnvironment r0, 0, r1
+    StoreNPToEnvironment r0, 1, r1
+    StoreNPToEnvironment r0, 2, r1
+    Mov               r9, r1
+    NewObject         r10
+    PutNewOwnByIdShort r10, r2, "a"
+    StoreToEnvironment r0, 0, r10
+    LoadFromEnvironment r11, r0, 0
+    NewObjectWithParent r12, r11
+    PutNewOwnByIdShort r12, r3, "a"
+    StoreToEnvironment r0, 1, r12
+    LoadFromEnvironment r17, r0, 1
+    Mov               r14, r17
+    GetPNameList      r13, r14, r15, r16
+    JmpUndefined      L1, r13
+L2:
+    GetNextPName      r18, r13, r14, r15, r16
+    JmpUndefined      L1, r18
+    Mov               r1, r18
+    StoreToEnvironment r0, 2, r1
+    TryGetById        r2, r4, 1, "console"
+    GetByIdShort      r3, r2, 2, "log"
+    LoadFromEnvironment r10, r0, 2
+    LoadFromEnvironment r11, r0, 1
+    LoadFromEnvironment r12, r0, 2
+    GetByVal          r17, r11, r12
+    TryGetById        r19, r4, 3, "HermesInternal"
+    GetByIdShort      r20, r19, 4, "concat"
+    Mov               r32, r7
+    Mov               r31, r10
+    Mov               r30, r8
+    Mov               r29, r17
+    Call              r21, r20, 4
+    Mov               r32, r2
+    Mov               r31, r21
+    Call              r22, r3, 2
+    Mov               r9, r22
+    Jmp               L2
+L1:
+    TryGetById        r1, r4, 5, "Object"
+    GetByIdShort      r2, r1, 6, "defineProperty"
+    LoadFromEnvironment r3, r0, 1
+    NewObject         r10
+    PutNewOwnByIdShort r10, r5, "enumerable"
+    Mov               r32, r1
+    Mov               r31, r3
+    Mov               r30, r6
+    Mov               r29, r10
+    Call              r11, r2, 4
+    Mov               r9, r11
+    LoadFromEnvironment r21, r0, 1
+    Mov               r17, r21
+    GetPNameList      r12, r17, r19, r20
+    JmpUndefined      L3, r12
+L4:
+    GetNextPName      r22, r12, r17, r19, r20
+    JmpUndefined      L3, r22
+    Mov               r1, r22
+    StoreToEnvironment r0, 2, r1
+    TryGetById        r2, r4, 1, "console"
+    GetByIdShort      r3, r2, 2, "log"
+    LoadFromEnvironment r10, r0, 2
+    LoadFromEnvironment r11, r0, 1
+    LoadFromEnvironment r21, r0, 2
+    GetByVal          r23, r11, r21
+    TryGetById        r24, r4, 3, "HermesInternal"
+    GetByIdShort      r25, r24, 4, "concat"
+    Mov               r32, r7
+    Mov               r31, r10
+    Mov               r30, r8
+    Mov               r29, r23
+    Call              r26, r25, 4
+    Mov               r32, r2
+    Mov               r31, r26
+    Call              r27, r3, 2
+    Mov               r9, r27
+    Jmp               L4
+L3:
+    Mov               r1, r9
+    Ret               r1
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/forIn/forIn_04.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 43: line 1 col 15
+    bc 58: line 2 col 13
+    bc 97: line 5 col 3
+    bc 103: line 5 col 14
+    bc 120: line 5 col 35
+    bc 124: line 5 col 15
+    bc 130: line 5 col 15
+    bc 147: line 5 col 15
+    bc 157: line 5 col 14
+    bc 166: line 11 col 1
+    bc 172: line 11 col 22
+    bc 183: line 11 col 33
+    bc 199: line 11 col 22
+    bc 237: line 14 col 3
+    bc 243: line 14 col 14
+    bc 260: line 14 col 35
+    bc 264: line 14 col 15
+    bc 270: line 14 col 15
+    bc 287: line 14 col 15
+    bc 297: line 14 col 14
+  0x0040  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

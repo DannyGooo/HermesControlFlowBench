@@ -1,0 +1,193 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 11
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..-1]: 
+s1[ASCII, 0..7]:  is odd.
+s2[ASCII, 8..13]: global
+s3[ASCII, 14..17]: i = 
+s4[ASCII, 18..20]: i: 
+s5[ASCII, 21..24]: j = 
+s6[ASCII, 25..27]: j: 
+i7[ASCII, 28..41] #85BBF6F9: HermesInternal
+i8[ASCII, 42..47] #CB8DFA65: concat
+i9[ASCII, 48..54] #629A2BFD: console
+i10[ASCII, 55..57] #1C35E808: log
+
+Function<global>(1 params, 37 registers, 2 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    LoadConstZero     r2
+    LoadConstUInt8    r3, 8
+    GetGlobalObject   r4
+    LoadConstString   r5, "i: "
+    LoadConstUInt8    r6, 1
+    LoadConstUInt8    r7, 4
+    LoadConstString   r8, "i = "
+    LoadConstString   r9, "j = "
+    LoadConstString   r10, "j: "
+    LoadConstUInt8    r11, 2
+    LoadConstString   r12, ""
+    LoadConstString   r13, " is odd."
+    StoreNPToEnvironment r0, 0, r1
+    StoreNPToEnvironment r0, 1, r1
+    Mov               r14, r1
+    StoreNPToEnvironment r0, 0, r2
+    StoreNPToEnvironment r0, 1, r3
+    LoadFromEnvironment r1, r0, 0
+    Less              r3, r1, r7
+    JmpFalseLong      L1, r3
+L5:
+    TryGetById        r1, r4, 1, "console"
+    GetByIdShort      r3, r1, 2, "log"
+    LoadFromEnvironment r15, r0, 0
+    TryGetById        r16, r4, 3, "HermesInternal"
+    GetByIdShort      r17, r16, 4, "concat"
+    Mov               r30, r5
+    Mov               r29, r15
+    Call              r18, r17, 2
+    Mov               r30, r1
+    Mov               r29, r18
+    Call              r19, r3, 2
+    Mov               r14, r19
+    LoadFromEnvironment r20, r0, 0
+    Add               r21, r20, r6
+    StoreToEnvironment r0, 0, r21
+    Mov               r14, r21
+    LoadFromEnvironment r1, r0, 1
+    Greater           r3, r1, r7
+    JmpFalseLong      L2, r3
+L4:
+    TryGetById        r1, r4, 1, "console"
+    GetByIdShort      r3, r1, 2, "log"
+    LoadFromEnvironment r15, r0, 1
+    TryGetById        r16, r4, 3, "HermesInternal"
+    GetByIdShort      r17, r16, 4, "concat"
+    Mov               r30, r10
+    Mov               r29, r15
+    Call              r18, r17, 2
+    Mov               r30, r1
+    Mov               r29, r18
+    Call              r19, r3, 2
+    Mov               r14, r19
+    LoadFromEnvironment r20, r0, 1
+    Sub               r21, r20, r6
+    StoreToEnvironment r0, 1, r21
+    Mov               r14, r21
+    LoadFromEnvironment r22, r0, 1
+    Mod               r23, r22, r11
+    StrictEq          r24, r23, r2
+    JmpTrue           L3, r24
+    TryGetById        r1, r4, 1, "console"
+    GetByIdShort      r3, r1, 2, "log"
+    LoadFromEnvironment r15, r0, 1
+    TryGetById        r16, r4, 3, "HermesInternal"
+    GetByIdShort      r17, r16, 4, "concat"
+    Mov               r30, r12
+    Mov               r29, r15
+    Mov               r28, r13
+    Call              r18, r17, 3
+    Mov               r30, r1
+    Mov               r29, r18
+    Call              r19, r3, 2
+    Mov               r14, r19
+    Jmp               L3
+L3:
+    LoadFromEnvironment r1, r0, 1
+    Greater           r3, r1, r7
+    JmpTrueLong       L4, r3
+L2:
+    TryGetById        r1, r4, 1, "console"
+    GetByIdShort      r3, r1, 2, "log"
+    LoadFromEnvironment r15, r0, 0
+    TryGetById        r16, r4, 3, "HermesInternal"
+    GetByIdShort      r17, r16, 4, "concat"
+    Mov               r30, r8
+    Mov               r29, r15
+    Call              r18, r17, 2
+    Mov               r30, r1
+    Mov               r29, r18
+    Call              r19, r3, 2
+    Mov               r14, r19
+    TryGetById        r20, r4, 1, "console"
+    GetByIdShort      r21, r20, 2, "log"
+    LoadFromEnvironment r22, r0, 1
+    TryGetById        r23, r4, 3, "HermesInternal"
+    GetByIdShort      r24, r23, 4, "concat"
+    Mov               r30, r9
+    Mov               r29, r22
+    Call              r25, r24, 2
+    Mov               r30, r20
+    Mov               r29, r25
+    Call              r26, r21, 2
+    Mov               r14, r26
+    LoadFromEnvironment r1, r0, 0
+    Less              r3, r1, r7
+    JmpTrueLong       L5, r3
+L1:
+    Mov               r1, r14
+    Ret               r1
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/continue/continue_02.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 67: line 4 col 20
+    bc 77: line 5 col 3
+    bc 83: line 5 col 14
+    bc 92: line 5 col 15
+    bc 98: line 5 col 15
+    bc 109: line 5 col 15
+    bc 119: line 5 col 14
+    bc 130: line 6 col 5
+    bc 145: line 8 col 18
+    bc 155: line 9 col 5
+    bc 161: line 9 col 16
+    bc 170: line 9 col 17
+    bc 176: line 9 col 17
+    bc 187: line 9 col 17
+    bc 197: line 9 col 16
+    bc 208: line 10 col 7
+    bc 223: line 12 col 9
+    bc 234: line 13 col 5
+    bc 240: line 13 col 16
+    bc 249: line 13 col 17
+    bc 255: line 13 col 17
+    bc 269: line 13 col 17
+    bc 279: line 13 col 16
+    bc 292: line 8 col 18
+    bc 302: line 15 col 3
+    bc 308: line 15 col 14
+    bc 317: line 15 col 15
+    bc 323: line 15 col 15
+    bc 334: line 15 col 15
+    bc 344: line 15 col 14
+    bc 351: line 16 col 3
+    bc 357: line 16 col 14
+    bc 366: line 16 col 15
+    bc 372: line 16 col 15
+    bc 383: line 16 col 15
+    bc 393: line 16 col 14
+    bc 404: line 4 col 20
+  0x0074  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

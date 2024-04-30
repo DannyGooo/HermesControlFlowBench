@@ -1,0 +1,189 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 2
+  String count: 11
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..0]: A
+s1[ASCII, 1..26]: Parameter is not a number!
+s2[ASCII, 27..32]: global
+i3[ASCII, 33..37] #9102A3D0: Error
+i4[ASCII, 38..44] #629A2BFD: console
+i5[ASCII, 45..49] #2CC2B0DA: error
+i6[ASCII, 50..60] #486EAD33: getRectArea
+i7[ASCII, 61..65] #EB182578: isNaN
+i8[ASCII, 66..71] #15A9FF56: length
+i9[ASCII, 72..74] #1C35E808: log
+i10[ASCII, 75..83] #807C5F3D: prototype
+
+Array Buffer:
+[int 1]
+[int 2]
+[int 3]
+[int 4]
+[int 5]
+[int 6]
+Function<global>(1 params, 27 registers, 4 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    DeclareGlobalVar  "getRectArea"
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    GetGlobalObject   r2
+    LoadConstZero     r3
+    LoadConstUInt8    r4, 1
+    LoadConstUInt8    r5, 3
+    LoadConstString   r6, "A"
+    StoreNPToEnvironment r0, 0, r1
+    StoreNPToEnvironment r0, 1, r1
+    StoreNPToEnvironment r0, 2, r1
+    CreateClosure     r7, r0, 1
+    PutById           r2, r7, 1, "getRectArea"
+    Mov               r8, r1
+    NewArrayWithBuffer r9, 6, 6, 0
+    StoreToEnvironment r0, 0, r9
+L5:
+    GetByIdShort      r7, r2, 1, "getRectArea"
+    Mov               r20, r1
+    Mov               r19, r5
+    Mov               r18, r6
+    Call              r9, r7, 3
+    Mov               r8, r9
+L6:
+    JmpLong           L2
+L1:
+    Catch             r7
+    StoreToEnvironment r0, 3, r7
+    TryGetById        r9, r2, 2, "console"
+    GetByIdShort      r10, r9, 3, "error"
+    LoadFromEnvironment r11, r0, 3
+    Mov               r20, r9
+    Mov               r19, r11
+    Call              r12, r10, 2
+    Mov               r8, r12
+    StoreNPToEnvironment r0, 1, r3
+    LoadFromEnvironment r13, r0, 0
+    GetByIdShort      r14, r13, 4, "length"
+    Sub               r15, r14, r4
+    StoreToEnvironment r0, 2, r15
+    LoadFromEnvironment r7, r0, 1
+    LoadFromEnvironment r9, r0, 2
+    Less              r10, r7, r9
+    JmpFalse          L2, r10
+L3:
+    TryGetById        r7, r2, 2, "console"
+    GetByIdShort      r9, r7, 5, "log"
+    LoadFromEnvironment r10, r0, 0
+    LoadFromEnvironment r11, r0, 1
+    GetByVal          r12, r10, r11
+    LoadFromEnvironment r13, r0, 0
+    LoadFromEnvironment r14, r0, 2
+    GetByVal          r15, r13, r14
+    Mov               r20, r7
+    Mov               r19, r12
+    Mov               r18, r15
+    Call              r16, r9, 3
+    Mov               r8, r16
+    LoadFromEnvironment r7, r0, 1
+    ToNumber          r9, r7
+    AddN              r10, r9, r4
+    StoreToEnvironment r0, 1, r10
+    LoadFromEnvironment r11, r0, 2
+    ToNumber          r12, r11
+    SubN              r13, r12, r4
+    StoreToEnvironment r0, 2, r13
+    LoadFromEnvironment r7, r0, 1
+    LoadFromEnvironment r9, r0, 2
+    Less              r10, r7, r9
+    JmpTrue           L3, r10
+L2:
+    Mov               r7, r8
+    Ret               r7
+
+Exception Handlers:
+0: start = L5, end = L6, target = L1
+
+Function<getRectArea>(3 params, 18 registers, 2 symbols):
+Offset in debug table: source 0x003d, lexical 0x0000
+    CreateEnvironment r0
+    LoadParam         r1, 1
+    LoadParam         r2, 2
+    GetGlobalObject   r3
+    LoadConstUndefined r4
+    LoadConstString   r5, "Parameter is not a number!"
+    StoreToEnvironment r0, 0, r1
+    StoreToEnvironment r0, 1, r2
+    TryGetById        r6, r3, 1, "isNaN"
+    LoadFromEnvironment r7, r0, 0
+    Mov               r11, r4
+    Mov               r10, r7
+    Call              r8, r6, 2
+    JmpTrue           L1, r8
+    TryGetById        r1, r3, 1, "isNaN"
+    LoadFromEnvironment r2, r0, 1
+    Mov               r11, r4
+    Mov               r10, r2
+    Call              r6, r1, 2
+    JmpTrue           L1, r6
+    Ret               r4
+L1:
+    TryGetById        r1, r3, 2, "Error"
+    GetByIdShort      r2, r1, 3, "prototype"
+    CreateThis        r6, r2, r1
+    Mov               r11, r6
+    Mov               r10, r5
+    Construct         r7, r1, 2
+    SelectObject      r8, r6, r7
+    Throw             r8
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/complex/complex_05.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 40: line 1 col 1
+    bc 61: line 13 col 5
+    bc 75: line 13 col 16
+    bc 82: line 14 col 3
+    bc 87: line 14 col 5
+    bc 93: line 15 col 5
+    bc 99: line 15 col 18
+    bc 114: line 15 col 18
+    bc 129: line 16 col 28
+    bc 134: line 16 col 25
+    bc 150: line 16 col 41
+    bc 157: line 17 col 9
+    bc 163: line 17 col 20
+    bc 176: line 17 col 24
+    bc 188: line 17 col 32
+    bc 201: line 17 col 20
+    bc 212: line 16 col 49
+    bc 227: line 16 col 54
+    bc 246: line 16 col 41
+  0x003d  function idx 1, starts at line 6 col 1
+    bc 24: line 7 col 9
+    bc 40: line 7 col 14
+    bc 47: line 7 col 25
+    bc 63: line 7 col 30
+    bc 72: line 8 col 17
+    bc 78: line 8 col 22
+    bc 83: line 8 col 22
+    bc 93: line 8 col 22
+    bc 101: line 8 col 7
+  0x005c  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table

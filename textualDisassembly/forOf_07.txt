@@ -1,0 +1,96 @@
+Bytecode File Information:
+  Bytecode version number: 84
+  Source hash: 0000000000000000000000000000000000000000
+  Function count: 1
+  String count: 7
+  String Kind Entry count: 2
+  RegExp count: 0
+  Segment ID: 0
+  CommonJS module count: 0
+  CommonJS module count (static): 0
+  Function source count: 0
+  Bytecode options:
+    staticBuiltins: 0
+    cjsModulesStaticallyResolved: 0
+
+Global String Table:
+s0[ASCII, 0..10]: article > p
+s1[ASCII, 11..16]: global
+s2[ASCII, 17..20]: read
+i3[ASCII, 21..23] #58FA9DBB: add
+i4[ASCII, 24..32] #2191B23E: classList
+i5[ASCII, 33..40] #FDA9D117: document
+i6[ASCII, 41..56] #0B23042E: querySelectorAll
+
+Function<global>(1 params, 22 registers, 2 symbols):
+Offset in debug table: source 0x0000, lexical 0x0000
+    CreateEnvironment r0
+    LoadConstUndefined r1
+    GetGlobalObject   r2
+    LoadConstString   r3, "article > p"
+    LoadConstString   r4, "read"
+    StoreNPToEnvironment r0, 0, r1
+    StoreNPToEnvironment r0, 1, r1
+    Mov               r5, r1
+    TryGetById        r6, r2, 1, "document"
+    GetByIdShort      r7, r6, 2, "querySelectorAll"
+    Mov               r15, r6
+    Mov               r14, r3
+    Call              r8, r7, 2
+    StoreToEnvironment r0, 0, r8
+    LoadFromEnvironment r9, r0, 0
+    Mov               r11, r9
+    IteratorBegin     r12, r11
+    Mov               r10, r12
+L3:
+    IteratorNext      r2, r10, r11
+    Mov               r3, r10
+    StrictEq          r6, r3, r1
+    JmpTrue           L1, r6
+L5:
+    StoreToEnvironment r0, 1, r2
+    LoadFromEnvironment r3, r0, 1
+    GetByIdShort      r6, r3, 3, "classList"
+    GetByIdShort      r7, r6, 4, "add"
+    Mov               r15, r6
+    Mov               r14, r4
+    Call              r8, r7, 2
+    Mov               r5, r8
+L6:
+    Jmp               L3
+L2:
+    Catch             r3
+    IteratorClose     r10, 1
+    Throw             r3
+L1:
+    Mov               r3, r5
+    Ret               r3
+
+Exception Handlers:
+0: start = L5, end = L6, target = L2
+
+Debug filename table:
+  0: /srv/home/yliu0097/projects/react-native/reactNativeInput/JStest/HermesControlFlow/JS/forOf/forOf_07.js
+
+Debug file table:
+  source table offset 0x0000: filename id 0
+
+Debug source table:
+  0x0000  function idx 0, starts at line 1 col 1
+    bc 25: line 1 col 27
+    bc 31: line 1 col 52
+    bc 42: line 1 col 52
+    bc 57: line 2 col 1
+    bc 63: line 2 col 1
+    bc 85: line 3 col 12
+    bc 90: line 3 col 26
+    bc 101: line 3 col 26
+    bc 108: line 4 col 1
+    bc 110: line 4 col 1
+    bc 112: line 4 col 1
+    bc 115: line 4 col 1
+  0x0028  end of debug source table
+
+Debug lexical table:
+  0x0000  lexical parent: none, variable count: 0
+  0x0002  end of debug lexical table
